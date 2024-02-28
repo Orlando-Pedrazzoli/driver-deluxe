@@ -1,5 +1,6 @@
 import React from 'react';
 import massage_img from '../assets/massage1.png';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -12,22 +13,27 @@ function Hero() {
 
           <div className='lg:py-24'>
             <h2 className='text-3xl font-bold sm:text-4xl'>
-              Grow your audience
+              Drive Safe and Health
             </h2>
 
-            <p className='mt-4 text-gray-600'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui
-              hic atque tenetur quis eius quos ea neque sunt, accusantium soluta
-              minus veniam tempora deserunt? Molestiae eius quidem quam
-              repellat.
+            <p className='mt-5 text-gray-600'>
+              As drivers, we often overlook the importance of maintaining a
+              relaxed and focused state behind the wheel. However, driving
+              safely not only safeguards our well-being but also enhances the
+              overall journey experience. <br /> With our innovative massage
+              app, drivers can discover the finest massage spots across
+              Portugal, ensuring a rejuvenating experience awaits at every turn.
+              By prioritizing safety and comfort during your travels, our app
+              not only promotes responsible driving habits but also encourages a
+              holistic approach to well-being.
             </p>
 
-            <a
-              href='#'
-              className='mt-8 inline-block rounded bg-red-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400'
+            <Link
+              to='/services'
+              className='mt-8 inline-block rounded bg-red-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-red-600 focus:outline-none focus:ring focus:ring-yellow-400'
             >
               Explore Now
-            </a>
+            </Link>
           </div>
         </div>
       </div>
