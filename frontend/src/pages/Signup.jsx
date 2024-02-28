@@ -1,4 +1,3 @@
-import '../pages/CSS/Signup.css';
 import { Button, Checkbox, Form, Input } from 'antd';
 
 function Signup() {
