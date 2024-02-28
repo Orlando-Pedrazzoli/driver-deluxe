@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import BookNow from './pages/BookNow';
+import IsPrivate from './components/IsPrivate';
+import IsAnon from './components/IsAnon';
 
 function App() {
   return (
@@ -14,10 +16,38 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/booknow' element={<BookNow />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
+        <Route
+          path='/services'
+          element={
+            <IsPrivate>
+              <Services />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/booknow'
+          element={
+            <IsPrivate>
+              <BookNow />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/signup'
+          element={
+            <IsAnon>
+              <Signup />
+            </IsAnon>
+          }
+        />
+        <Route
+          path='/login'
+          element={
+            <IsAnon>
+              <Login />
+            </IsAnon>
+          }
+        />
       </Routes>
     </>
   );

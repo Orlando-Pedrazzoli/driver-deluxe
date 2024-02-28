@@ -1,4 +1,3 @@
-import React from 'react';
 import logo_nav from '../assets/logonav.png';
 import { Link } from 'react-router-dom';
 
