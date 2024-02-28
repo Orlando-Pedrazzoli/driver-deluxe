@@ -1,6 +1,5 @@
 import React from 'react';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+import { Button, ButtonGroup } from '@chakra-ui/react';
 
 function CategorySearch() {
   return (
@@ -9,6 +8,7 @@ function CategorySearch() {
       <h2 className='text-gray-500 text-xl'>
         Search your massage and Book Appointment
       </h2>
+      <Button colorScheme='red'>Search</Button>
     </div>
   );
 }

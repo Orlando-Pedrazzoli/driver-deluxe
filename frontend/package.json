@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.8",
@@ -18,6 +19,7 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.17",
     "antd": "^5.14.2",
     "axios": "^1.6.7",
+    "framer-motion": "^11.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.1",
