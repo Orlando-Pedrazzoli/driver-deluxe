@@ -1,4 +1,30 @@
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { signup } from '../api/auth.api';
+
 function Signup() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [license, setLicense] = useState('');
+  const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+
+    const user = { email, password, name, license };
+
+    try {
+      await signup(user);
+      navigate('/login');
+    } catch (error) {
+      console.log('Error signup', error);
+      setError(error.response.data.message);
+    }
+  };
+
   return (
     <div className='mx-auto max-w-screen-md mt-10 px-4 py-16 border-2 sm:px-6 lg:px-8'>
       <div className='mx-auto max-w-lg text-center'>
@@ -10,7 +36,42 @@ function Signup() {
         </p>
       </div>
 
-      <form action='#' className='mx-auto mb-0 mt-8 max-w-md space-y-4'>
+      <form
+        onSubmit={handleSubmit}
+        className='mx-auto mb-0 mt-8 max-w-md space-y-4'
+      >
+        <div>
+          <label htmlFor='name' className='sr-only'>
+            Name
+          </label>
+
+          <div className='relative'>
+            <input
+              type='name'
+              className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'
+              placeholder='Name'
+              value={name}
+              onChange={e => setName(e.target.value)}
+            />
+
+            <span className='absolute inset-y-0 end-0 grid place-content-center px-4'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='size-4 text-gray-400'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207'
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
         <div>
           <label htmlFor='email' className='sr-only'>
             Email
@@ -20,7 +81,9 @@ function Signup() {
             <input
               type='email'
               className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'
-              placeholder='Enter email'
+              placeholder='Email'
+              value={email}
+              onChange={e => setEmail(e.target.value)}
             />
 
             <span className='absolute inset-y-0 end-0 grid place-content-center px-4'>
@@ -51,7 +114,9 @@ function Signup() {
             <input
               type='password'
               className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'
-              placeholder='Enter password'
+              placeholder='Password'
+              value={password}
+              onChange={e => setPassword(e.target.value)}
             />
 
             <span className='absolute inset-y-0 end-0 grid place-content-center px-4'>
@@ -85,9 +150,11 @@ function Signup() {
 
           <div className='relative'>
             <input
-              type='license'
+              type='text'
               className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'
-              placeholder='Enter TVDE license'
+              placeholder='TVDE license number'
+              value={license}
+              onChange={e => setLicense(e.target.value)}
             />
 
             <span className='absolute inset-y-0 end-0 grid place-content-center px-4'>
@@ -117,20 +184,21 @@ function Signup() {
 
         <div className='flex items-center justify-between'>
           <p className='text-sm text-gray-500'>
-            No account?
-            <a className='underline' href='#'>
-              Sign up
-            </a>
+            Already have an account?
+            <Link to='/login' className='underline m-1' href='#'>
+              Login
+            </Link>
           </p>
 
           <button
             type='submit'
-            className='inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white'
+            className='inline-block rounded-lg bg-red-500 px-5 py-3 text-sm font-medium text-white'
           >
-            Sign in
+            Sign up
           </button>
         </div>
       </form>
+      {error && <p>{error}</p>}
     </div>
   );
 }

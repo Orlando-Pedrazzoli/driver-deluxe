@@ -32,14 +32,7 @@ function App() {
             </IsPrivate>
           }
         />
-        <Route
-          path='/signup'
-          element={
-            <IsAnon>
-              <Signup />
-            </IsAnon>
-          }
-        />
+        <Route path='/signup' element={<Signup />} />
         <Route
           path='/login'
           element={
