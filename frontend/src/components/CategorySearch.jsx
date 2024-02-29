@@ -1,8 +1,27 @@
-import React from 'react';
-import { Input } from '@chakra-ui/react';
-import { Button, ButtonGroup } from '@chakra-ui/react';
+import React, { useState, useEffect } from 'react';
+import { getAllServices } from '../api/services.api';
+import img_hero from '../assets/img-hero.png';
+import massage1 from '../assets/massage1.png';
+import massge2 from '../assets/reflexology.png';
+import massage3 from '../assets/chairmassage.png';
+import massage4 from '../assets/vibration.png';
 
 function CategorySearch() {
+  const [services, setServices] = useState([]);
+
+  const getServices = async () => {
+    try {
+      const response = await getAllServices();
+      setServices(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getServices();
+  }, []);
+
   return (
     <div className='mb-10 items-center flex flex-col gap-2'>
       <h2 className='font-bold text-4xl tracking-wide'>Search Massage </h2>
@@ -41,6 +60,20 @@ function CategorySearch() {
             </svg>
           </button>
         </span>
+      </div>
+      <div className='grid grid-cols-1 m-7 gap-4 lg:grid-cols-4 lg:gap-16'>
+        <div className='h-40 rounded-lg bg-gray-200'>
+          <img src={massage1} alt='' className='h-full w-full object-cover' />
+        </div>
+        <div className='h-40 rounded-lg bg-gray-200'>
+          <img src={massage3} alt='' className='h-full w-full object-cover' />
+        </div>
+        <div className='h-40 rounded-lg bg-gray-200'>
+          <img src={massge2} alt='' className='h-full w-full object-cover' />
+        </div>
+        <div className='h-40 rounded-lg bg-gray-200 '>
+          <img src={massage4} alt='' className='h-full w-full object-cover' />
+        </div>
       </div>
     </div>
   );

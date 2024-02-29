@@ -13,7 +13,7 @@ function Hero() {
 
           <div className='lg:py-24'>
             <h2 className='text-3xl font-bold sm:text-4xl'>
-              Drive Safe and Health
+              Find & Book Appointment
             </h2>
 
             <p className='mt-5 text-gray-600'>

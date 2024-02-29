@@ -1,9 +1,8 @@
-import logo_nav from '../assets/logonav.png';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <header className='bg-white'>
+    <header className='bg-white border-b border-gray-200'>
       <div className='mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8'>
         <div className='flex h-16 items-center justify-between'>
           <div className='md:flex md:items-center md:gap-12'>

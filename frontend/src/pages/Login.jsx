@@ -33,8 +33,8 @@ function Login() {
 
         <p className='mt-4 text-gray-500'>
           Ready to take your driving experience to the next level? Sign up now
-          and start reaping the rewards of being part of
-          <span className='text-black font-bold'> Route Mate!</span>
+          and start reaping the rewards of being part of exclusive drivers
+          appointments!
         </p>
       </div>
 
