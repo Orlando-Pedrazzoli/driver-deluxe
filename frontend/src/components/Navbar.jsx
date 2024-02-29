@@ -9,7 +9,7 @@ function Navbar() {
           <div className='md:flex md:items-center md:gap-12'>
             <Link to='/' className='block'>
               <span className='sr-only'>Home</span>
-              <img src={logo_nav} alt='logo' className='w-28' />
+              <p className='font-bold tracking-wide text-2xl '>DRIVER CARE</p>
             </Link>
           </div>
 

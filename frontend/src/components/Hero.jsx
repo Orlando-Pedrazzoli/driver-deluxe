@@ -1,5 +1,5 @@
 import React from 'react';
-import massage_img from '../assets/massage1.png';
+import hero_img from '../assets/img-hero.png';
 import { Link } from 'react-router-dom';
 
 function Hero() {
@@ -7,8 +7,8 @@ function Hero() {
     <section>
       <div className='mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
         <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16'>
-          <div className='relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full'>
-            <img src={massage_img} alt='' />
+          <div className='relative h-64 overflow-hidden sm:h-80 lg:order-last lg:h-full'>
+            <img src={hero_img} alt='' className='rounded-lg' />
           </div>
 
           <div className='lg:py-24'>

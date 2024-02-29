@@ -16,31 +16,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route
-          path='/services'
-          element={
-            <IsPrivate>
-              <Services />
-            </IsPrivate>
-          }
-        />
-        <Route
-          path='/booknow'
-          element={
-            <IsPrivate>
-              <BookNow />
-            </IsPrivate>
-          }
-        />
+        <Route path='/services' element={<Services />} />
+        <Route path='/booknow' element={<BookNow />} />
         <Route path='/signup' element={<Signup />} />
-        <Route
-          path='/login'
-          element={
-            <IsAnon>
-              <Login />
-            </IsAnon>
-          }
-        />
+        <Route path='/login' element={<Login />} />
       </Routes>
     </>
   );
