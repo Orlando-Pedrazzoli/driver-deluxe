@@ -2,9 +2,9 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className='bg-white '>
-      <div className='mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8'>
-        <div className='mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32'>
+    <footer className='bg-gray-100 '>
+      <div className='mx-auto max-w-screen-xl px-4 pb-6 pt-8 sm:px-6 lg:px-8'>
+        <div className='mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32'>
           <div className='mx-auto max-w-sm lg:max-w-none'>
             <p className='mt-4 text-center text-gray-500 lg:text-left lg:text-lg'>
               We're here to support you every step of the way. Drive safe, and
@@ -108,15 +108,6 @@ function Footer() {
                     className='text-gray-700 transition hover:text-gray-700/75'
                     href='#'
                   >
-                    Marketing
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className='text-gray-700 transition hover:text-gray-700/75'
-                    href='#'
-                  >
                     App Development
                   </a>
                 </li>
@@ -153,15 +144,6 @@ function Footer() {
                     History
                   </a>
                 </li>
-
-                <li>
-                  <a
-                    className='text-gray-700 transition hover:text-gray-700/75'
-                    href='#'
-                  >
-                    Our Team
-                  </a>
-                </li>
               </ul>
             </div>
 
@@ -184,15 +166,6 @@ function Footer() {
                     href='#'
                   >
                     Contact
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className='text-gray-700 transition hover:text-gray-700/75'
-                    href='#'
-                  >
-                    Live Chat
                   </a>
                 </li>
               </ul>

@@ -36,11 +36,6 @@ function Hero() {
             </Link>
           </div>
         </div>
-        <span className='flex items-center'>
-          <span className='h-px flex-1 bg-gray-300'></span>
-          <span className='shrink-0 px-6'></span>
-          <span className='h-px flex-1 bg-gray-300'></span>
-        </span>
       </div>
     </section>
   );
