@@ -30,12 +30,17 @@ function Hero() {
 
             <Link
               to='/services'
-              className='mt-8 inline-block rounded bg-red-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-red-600 focus:outline-none focus:ring focus:ring-yellow-400'
+              className='mt-8 inline-block rounded bg-red-500 px-10 py-3 text-sm font-medium text-white transition hover:bg-red-600 f'
             >
               Explore Now
             </Link>
           </div>
         </div>
+        <span className='flex items-center'>
+          <span className='h-px flex-1 bg-gray-300'></span>
+          <span className='shrink-0 px-6'></span>
+          <span className='h-px flex-1 bg-gray-300'></span>
+        </span>
       </div>
     </section>
   );

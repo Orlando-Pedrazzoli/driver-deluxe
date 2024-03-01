@@ -1,12 +1,12 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import CategorySearch from '../components/CategorySearch';
+import ServiceList from '../components/ServiceList';
 
 function Home() {
   return (
     <div>
       <Hero />
-      <CategorySearch />
+      <ServiceList />
     </div>
   );
 }

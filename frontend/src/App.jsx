@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import BookNow from './pages/BookNow';
+import Footer from './components/Footer';
 import IsPrivate from './components/IsPrivate';
 import IsAnon from './components/IsAnon';
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
       </Routes>
+      <Footer />
     </>
   );
 }
