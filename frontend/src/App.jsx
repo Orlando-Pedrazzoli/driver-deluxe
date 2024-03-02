@@ -7,8 +7,6 @@ import About from './pages/About';
 import Services from './pages/Services';
 import BookNow from './pages/BookNow';
 import Footer from './components/Footer';
-import IsPrivate from './components/IsPrivate';
-import IsAnon from './components/IsAnon';
 import SingleService from './pages/SingleService';
 
 function App() {
@@ -22,7 +20,7 @@ function App() {
         <Route path='/booknow' element={<BookNow />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/singleservice' element={<SingleService />} />
+        <Route path='/services/:serviceId' element={<SingleService />} />
       </Routes>
       <Footer />
     </>

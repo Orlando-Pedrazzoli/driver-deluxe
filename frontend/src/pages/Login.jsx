@@ -25,7 +25,7 @@ function Login() {
     }
   };
   return (
-    <div className='mx-auto max-w-screen-md mt-10 px-4 py-14 border-2 sm:px-6 lg:px-8'>
+    <div className='mb-10 mx-auto max-w-screen-md mt-10 px-4 py-14 border-2 sm:px-6 lg:px-8'>
       <div className='mx-auto max-w-lg text-center'>
         <h1 className='text-2xl font-bold sm:text-3xl'>
           Ready to get started?
@@ -99,7 +99,7 @@ function Login() {
 
         <div className='flex items-center justify-between'>
           <p className='text-sm text-gray-500 mt-3'>
-            Don't have an account?
+            Don`t have an account?
             <Link to='/signup' className='underline m-1' href='#'>
               Signup
             </Link>

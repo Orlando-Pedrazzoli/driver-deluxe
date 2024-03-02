@@ -1,7 +1,11 @@
-import React from 'react';
+import ServiceList from '../components/ServiceList';
 
 function Services() {
-  return <div>SERVICES</div>;
+  return (
+    <div>
+      <ServiceList />
+    </div>
+  );
 }
 
 export default Services;

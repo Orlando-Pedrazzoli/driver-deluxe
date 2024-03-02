@@ -21,7 +21,7 @@ function ServiceList() {
 
         <ul className='mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
           <li>
-            <Link to='/singleservice'>
+            <Link to={`/services/${serviceId}`}>
               <img
                 src={massage1}
                 alt=''
