@@ -5,11 +5,11 @@ import { useParams } from 'react-router-dom';
 function SingleService() {
   const [service, setService] = useState({});
 
-  const { serviceId } = useParams();
+  const { serviceType } = useParams();
 
   const getSingleService = async () => {
     try {
-      const response = await getService(serviceId);
+      const response = await getService(serviceType);
       console.log(response.data);
       setService(response.data);
     } catch (error) {
