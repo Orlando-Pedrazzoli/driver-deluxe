@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import BookNow from './pages/BookNow';
 import Footer from './components/Footer';
 import SingleService from './pages/SingleService';
+import Vibration from './pages/Vibration';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/booknow' element={<BookNow />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/vibration' element={<Vibration />} />
         <Route path='/services/:serviceId' element={<SingleService />} />
       </Routes>
       <Footer />
