@@ -1,5 +1,14 @@
 import React from 'react';
 import vibration_img from '../assets/vibration.png';
+import BookingSection from '@/components/BookingSection';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 
 function Vibration() {
   return (
@@ -129,12 +138,16 @@ function Vibration() {
                 </strong>
               </p>
 
-              <button
-                type='button'
-                className='mt-4 block rounded border border-red-600 bg-red-500 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-              >
-                Book Now
-              </button>
+              <BookingSection>
+                <div>
+                  <button
+                    type='button'
+                    className='mt-4 block rounded border border-red-600 bg-red-500 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </BookingSection>
             </div>
           </div>
 
@@ -153,12 +166,16 @@ function Vibration() {
                 </strong>
               </p>
 
-              <button
-                type='button'
-                className='mt-4 block rounded border border-red-600 bg-red-500 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-              >
-                Book Now
-              </button>
+              <BookingSection>
+                <div>
+                  <button
+                    type='button'
+                    className='mt-4 block rounded border border-red-600 bg-red-500 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </BookingSection>
             </div>
           </div>
 
@@ -177,12 +194,16 @@ function Vibration() {
                 </strong>
               </p>
 
-              <button
-                type='button'
-                className='mt-4 block rounded border border-red-600 bg-red-500 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-              >
-                Book Now
-              </button>
+              <BookingSection>
+                <div>
+                  <button
+                    type='button'
+                    className='mt-4 block rounded border border-red-600 bg-red-500 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </BookingSection>
             </div>
           </div>
         </div>
