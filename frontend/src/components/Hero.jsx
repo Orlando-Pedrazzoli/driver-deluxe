@@ -32,7 +32,7 @@ function Hero() {
               to='/services'
               className='mt-8 inline-block rounded bg-red-500 px-10 py-3 text-sm font-medium text-white transition hover:bg-red-600 f'
             >
-              Explore Now
+              Book Now
             </Link>
           </div>
         </div>

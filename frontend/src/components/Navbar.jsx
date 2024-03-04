@@ -18,36 +18,34 @@ function Navbar() {
                 <li>
                   <Link
                     to='/'
-                    className='text-gray-500 transition hover:text-gray-500/75'
+                    className='text-gray-700 transition hover:text-gray-500/75'
                   >
                     Home
                   </Link>
                 </li>
-
-                <li>
-                  <Link
-                    to='/about'
-                    className='text-gray-500 transition hover:text-gray-500/75'
-                  >
-                    About
-                  </Link>
-                </li>
-
                 <li>
                   <Link
                     to='/services'
-                    className='text-gray-500 transition hover:text-gray-500/75'
+                    className='text-gray-700 transition hover:text-gray-500/75'
                   >
                     Services
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to='/news'
+                    className='text-gray-700 transition hover:text-gray-500/75'
+                  >
+                    News
+                  </Link>
+                </li>
 
                 <li>
                   <Link
-                    to='/booknow'
-                    className='text-gray-500 transition hover:text-gray-500/75'
+                    to='/contactus'
+                    className='text-gray-700 transition hover:text-gray-500/75'
                   >
-                    Book Now
+                    Contact Us
                   </Link>
                 </li>
               </ul>
