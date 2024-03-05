@@ -48,7 +48,7 @@ function ContactUs() {
         <div>
           <button
             type='submit'
-            className='w-full px-4 py-2 mt-4 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:ri bg-red-500 focus:ri hover:ri text-white'
+            className='w-full px-4 py-2 mt-4 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:ri bg-primary focus:ri hover:ri text-white'
           >
             Send
           </button>

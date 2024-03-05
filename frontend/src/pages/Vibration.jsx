@@ -142,7 +142,7 @@ function Vibration() {
                 <div>
                   <button
                     type='button'
-                    className='mt-4 block rounded border border-red-600 bg-red-500 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
+                    className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
                   >
                     Book Now
                   </button>
@@ -170,7 +170,7 @@ function Vibration() {
                 <div>
                   <button
                     type='button'
-                    className='mt-4 block rounded border border-red-600 bg-red-500 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
+                    className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
                   >
                     Book Now
                   </button>
@@ -198,7 +198,7 @@ function Vibration() {
                 <div>
                   <button
                     type='button'
-                    className='mt-4 block rounded border border-red-600 bg-red-500 px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
+                    className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
                   >
                     Book Now
                   </button>

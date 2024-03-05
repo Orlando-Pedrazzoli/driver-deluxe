@@ -136,7 +136,7 @@ function Signup() {
 
           <button
             type='submit'
-            className='inline-block rounded-lg bg-red-500 px-6 py-3 text-sm font-medium text-white'
+            className='inline-block rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white'
           >
             Sign up
           </button>

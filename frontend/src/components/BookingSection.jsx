@@ -83,9 +83,9 @@ function BookingSection({ children }) {
           <SheetFooter className='mt-5'>
             <SheetClose asChild>
               <div className='flex gap-5'>
-                <Button>Cancel</Button>
+                <Button className='bg-red-500 hover:bg-red-700'>Cancel</Button>
                 <Button
-                  className='bg-blue-500'
+                  className='bg-blue-500 hover:bg-blue-700'
                   disabled={!(selectedTime && date)}
                   onClick={() => saveBooking()}
                 >
