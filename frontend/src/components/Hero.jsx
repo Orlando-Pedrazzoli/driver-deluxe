@@ -30,7 +30,7 @@ function Hero() {
 
             <Link
               to='/services'
-              className='mt-8 inline-block rounded bg-primary px-10 py-3 text-sm font-medium text-white transition hover:bg-red-600 f'
+              className='mt-8 inline-block rounded bg-primary px-10 py-3 text-sm font-medium text-white transition hover:bg-blue-600 f'
             >
               Book Now
             </Link>

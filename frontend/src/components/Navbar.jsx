@@ -84,7 +84,7 @@ function Navbar() {
             </Link>
           </li>
 
-          <li className='nav-item-auth ml-4'>
+          <li className='nav-item-auth ml-8'>
             <Link to='/signup' onClick={closeMobileMenu}>
               <Button className='text-white bg-green-500 hover:bg-green-600 transition-all duration-200 ease-out'>
                 Sign Up
