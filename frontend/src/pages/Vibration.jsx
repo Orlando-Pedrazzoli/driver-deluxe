@@ -45,12 +45,13 @@ function Vibration() {
                 ></path>
               </svg>
               <div className='space-y-2'>
-                <p className='text-lg font-medium leadi'>Chair Massage:</p>
+                <p className='text-lg font-medium leadi'>Vibration:</p>
                 <p className='leadi'>
-                  Chair massage - also known as seated massage - is a type of
-                  massage that takes place on an traditional massage chair,
-                  designed to take the weight off the spine and give easy access
-                  to the head, neck, back, shoulders and arms.
+                  Vibrations are a massage technique in which tissues are
+                  pressed and released in an up and down movement. A vibration
+                  massage creates a vibrating and shaking motion onto the
+                  muscles that can be performed in a soothing or stimulating
+                  way.
                 </p>
               </div>
             </div>
@@ -101,7 +102,7 @@ function Vibration() {
 
                   <p className='mt-2 sm:mt-4'>
                     <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
-                      Price: {service.price}
+                      {service.price}€
                     </strong>
                   </p>
 

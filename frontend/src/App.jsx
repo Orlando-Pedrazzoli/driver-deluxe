@@ -28,7 +28,6 @@ function App() {
         <Route path='/reflexology' element={<Reflexology />} />
         <Route path='/chairmassage' element={<ChairMassage />} />
         <Route path='/shiatsu' element={<Shiatsu />} />
-        <Route path='/services/' element={<SingleService />} />
       </Routes>
       <Footer />
     </>

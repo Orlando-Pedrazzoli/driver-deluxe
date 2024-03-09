@@ -4,23 +4,24 @@ import BookingSection from '@/components/BookingSection';
 import { getService } from '@/api/services.api';
 import chairImg from '../assets/chairmassage.png';
 
-function Vibration() {
-  const [service, setService] = useState([]);
+function ChairMassage() {
+  const [services, setServices] = useState();
+  /* 
+  const { serviceType } = useLocation(); */
 
-  const { serviceType } = useParams();
-
-  const getSingleService = async () => {
+  const getServices = async () => {
     try {
-      const response = await getService(serviceType);
+      const response = await getService('chairmassage');
+      console.log(response);
       console.log(response.data);
-      setService(response.data);
+      setServices(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getSingleService();
+    getServices();
   }, []);
   return (
     <>
@@ -76,181 +77,50 @@ function Vibration() {
       </section>
       <div className='m-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
         <div className=' grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8'>
-          <div className='divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm'>
-            <div className='p-6 sm:px-8'>
-              <h2 className='text-lg font-medium text-gray-900'>
-                Service Name
-              </h2>
+          {services &&
+            services.map(service => (
+              <div
+                className='divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm'
+                key={service._id}
+              >
+                <div className='p-6 sm:px-8'>
+                  <h2 className='text-lg font-medium text-gray-900'>
+                    {service.company.name}
+                  </h2>
 
-              <p className='mt-2 text-gray-700'>Adress: ...</p>
-              <p className='mt-2 text-gray-700'>Contact: ...</p>
-              <p className='mt-2 text-gray-700'>Website: ...</p>
+                  <p className='mt-2 text-gray-700'>
+                    Address: {service.company.address}
+                  </p>
+                  <p className='mt-2 text-gray-700'>
+                    Contact: {service.company.contact}
+                  </p>
+                  <p className='mt-2 text-gray-700'>
+                    Website: {service.company.website}
+                  </p>
 
-              <p className='mt-2 sm:mt-4'>
-                <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
-                  30€
-                </strong>
-              </p>
+                  <p className='mt-2 sm:mt-4'>
+                    <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
+                      {service.price}€
+                    </strong>
+                  </p>
 
-              <BookingSection>
-                <div>
-                  <button
-                    type='button'
-                    className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-                  >
-                    Book Now
-                  </button>
+                  <BookingSection>
+                    <div>
+                      <button
+                        type='button'
+                        className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                  </BookingSection>
                 </div>
-              </BookingSection>
-            </div>
-          </div>
-
-          <div className='divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm'>
-            <div className='p-6 sm:px-8'>
-              <h2 className='text-lg font-medium text-gray-900'>45 minutes</h2>
-
-              <p className='mt-2 text-gray-700'>
-                Targeted relief, especially for those with time constraints or
-                specific pain points.
-              </p>
-
-              <p className='mt-2 sm:mt-4'>
-                <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
-                  45€
-                </strong>
-              </p>
-
-              <BookingSection>
-                <div>
-                  <button
-                    type='button'
-                    className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-                  >
-                    Book Now
-                  </button>
-                </div>
-              </BookingSection>
-            </div>
-          </div>
-
-          <div className='divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm'>
-            <div className='p-6 sm:px-8'>
-              <h2 className='text-lg font-medium text-gray-900'>1 hour</h2>
-
-              <p className='mt-2 text-gray-700'>
-                Ideal for full-body relaxation and comprehensive muscle tension
-                relief.
-              </p>
-
-              <p className='mt-2 sm:mt-4'>
-                <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
-                  60€
-                </strong>
-              </p>
-
-              <BookingSection>
-                <div>
-                  <button
-                    type='button'
-                    className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-                  >
-                    Book Now
-                  </button>
-                </div>
-              </BookingSection>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className='m-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <div className=' grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8'>
-          <div className='divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm'>
-            <div className='p-6 sm:px-8'>
-              <h2 className='text-lg font-medium text-gray-900'>30 minutes</h2>
-
-              <p className='mt-2 text-gray-700'>
-                A quick, concentrated session for immediate relief in targeted
-                areas like neck or back.
-              </p>
-
-              <p className='mt-2 sm:mt-4'>
-                <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
-                  30€
-                </strong>
-              </p>
-
-              <BookingSection>
-                <div>
-                  <button
-                    type='button'
-                    className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-                  >
-                    Book Now
-                  </button>
-                </div>
-              </BookingSection>
-            </div>
-          </div>
-
-          <div className='divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm'>
-            <div className='p-6 sm:px-8'>
-              <h2 className='text-lg font-medium text-gray-900'>45 minutes</h2>
-
-              <p className='mt-2 text-gray-700'>
-                Targeted relief, especially for those with time constraints or
-                specific pain points.
-              </p>
-
-              <p className='mt-2 sm:mt-4'>
-                <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
-                  45€
-                </strong>
-              </p>
-
-              <BookingSection>
-                <div>
-                  <button
-                    type='button'
-                    className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-                  >
-                    Book Now
-                  </button>
-                </div>
-              </BookingSection>
-            </div>
-          </div>
-
-          <div className='divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm'>
-            <div className='p-6 sm:px-8'>
-              <h2 className='text-lg font-medium text-gray-900'>1 hour</h2>
-
-              <p className='mt-2 text-gray-700'>
-                Ideal for full-body relaxation and comprehensive muscle tension
-                relief.
-              </p>
-
-              <p className='mt-2 sm:mt-4'>
-                <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
-                  60€
-                </strong>
-              </p>
-
-              <BookingSection>
-                <div>
-                  <button
-                    type='button'
-                    className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-                  >
-                    Book Now
-                  </button>
-                </div>
-              </BookingSection>
-            </div>
-          </div>
+              </div>
+            ))}
         </div>
       </div>
     </>
   );
 }
 
-export default Vibration;
+export default ChairMassage;

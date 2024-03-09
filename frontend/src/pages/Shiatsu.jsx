@@ -4,23 +4,24 @@ import BookingSection from '@/components/BookingSection';
 import { getService } from '@/api/services.api';
 import shiatsuImg from '../assets/massage1.png';
 
-function Vibration() {
-  const [service, setService] = useState([]);
+function Shiatsu() {
+  const [services, setServices] = useState();
+  /* 
+  const { serviceType } = useLocation(); */
 
-  const { serviceId } = useParams();
-
-  const getSingleService = async () => {
+  const getServices = async () => {
     try {
-      const response = await getService(serviceId);
+      const response = await getService('shiatsu');
+      console.log(response);
       console.log(response.data);
-      setService(response.data);
+      setServices(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getSingleService();
+    getServices();
   }, []);
   return (
     <>
@@ -167,4 +168,4 @@ function Vibration() {
   );
 }
 
-export default Vibration;
+export default Shiatsu;
