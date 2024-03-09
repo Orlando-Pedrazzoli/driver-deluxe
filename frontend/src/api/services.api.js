@@ -22,8 +22,8 @@ export const getAllServices = () => {
   return axios.get(`${baseURL}/services`);
 };
 
-export const getService = id => {
-  return axios.get(`${baseURL}/services/${id}`);
+export const getService = serviceType => {
+  return axios.get(`${baseURL}/services/${serviceType}`);
 };
 
 export const addService = service => {

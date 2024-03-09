@@ -1,5 +1,5 @@
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+/* import Login from './pages/Login';
+import Signup from './pages/Signup'; */
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -9,6 +9,9 @@ import ContactUs from './pages/ContactUs';
 import Footer from './components/Footer';
 import SingleService from './pages/SingleService';
 import Vibration from './pages/Vibration';
+import Shiatsu from './pages/Shiatsu';
+import ChairMassage from './pages/ChairMassage';
+import Reflexology from './pages/Reflexology';
 
 function App() {
   return (
@@ -19,10 +22,13 @@ function App() {
         <Route path='/news' element={<News />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact-us' element={<ContactUs />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/login' element={<Login />} />
+        {/* <Route path='/signup' element={<Signup />} />
+        <Route path='/login' element={<Login />} /> */}
         <Route path='/vibration' element={<Vibration />} />
-        <Route path='/services/:serviceId' element={<SingleService />} />
+        <Route path='/reflexology' element={<Reflexology />} />
+        <Route path='/chairmassage' element={<ChairMassage />} />
+        <Route path='/shiatsu' element={<Shiatsu />} />
+        <Route path='/services/' element={<SingleService />} />
       </Routes>
       <Footer />
     </>

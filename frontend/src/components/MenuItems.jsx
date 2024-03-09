@@ -6,7 +6,7 @@ export const MenuItems = [
   },
   {
     title: 'Chair Massage',
-    path: '/chair-massage',
+    path: '/chairmassage',
     cName: 'dropdown-link',
   },
   {
@@ -15,7 +15,7 @@ export const MenuItems = [
     cName: 'dropdown-link',
   },
   {
-    title: 'shiatsu',
+    title: 'Shiatsu',
     path: '/shiatsu',
     cName: 'dropdown-link',
   },
