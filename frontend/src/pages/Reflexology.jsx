@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import BookingSection from '@/components/BookingSection';
 import { getService } from '@/api/services.api';
 import reflexologyImg from '../assets/reflexology.png';
@@ -44,7 +43,7 @@ function Reflexology() {
                 ></path>
               </svg>
               <div className='space-y-2'>
-                <p className='text-lg font-medium leadi'>Chair Massage:</p>
+                <p className='text-lg font-medium leadi'>Reflexology:</p>
                 <p className='leadi'>
                   During a typical reflexology massage, reflex points on the
                   foot are subjected to gentle pressure. Each of these points is

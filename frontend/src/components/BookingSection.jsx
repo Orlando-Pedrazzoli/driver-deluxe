@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Sheet,
   SheetClose,
@@ -16,6 +16,7 @@ function BookingSection({ children }) {
   const [date, setDate] = useState(new Date());
   const [timeSlot, setTimeSlot] = useState([]);
   const [selectedTime, setSelectedTime] = useState();
+
   useEffect(() => {
     getTime();
   }, []);

@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { getService } from '@/api/services.api';
 import BookingSection from '@/components/BookingSection';
-import chairImg from '../assets/chairmassage.png';
+import vibrationImg from '../assets/vibration.png';
 
 function Vibration() {
   const [services, setServices] = useState();
@@ -59,7 +58,7 @@ function Vibration() {
           <div className='lg:w-1/2 xl:w-3/5 bg-gray-200'>
             <div className='flex items-center justify-center p-4 md:p-8 lg:p-12 relative group'>
               <img
-                src={chairImg}
+                src={vibrationImg}
                 alt='Description of Image'
                 className='rounded-lg shadow-lg bg-gray-500 aspect-video sm:min-h-96 transition duration-500 ease-in-out transform group-hover:scale-110'
               />

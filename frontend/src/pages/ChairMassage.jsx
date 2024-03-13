@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import BookingSection from '@/components/BookingSection';
 import { getService } from '@/api/services.api';
 import chairImg from '../assets/chairmassage.png';

@@ -1,35 +1,29 @@
-import { getService } from '../api/services.api';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { addServiceId } from '../api/services.api';
 
 function SingleService() {
-  const [service, setService] = useState({});
-
-  const { serviceType } = useParams();
-
-  const getSingleService = async () => {
-    try {
-      const response = await getService(serviceType);
-      console.log(response.data);
-      setService(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const { serviceId } = useParams();
+  const [service, setService] = useState();
 
   useEffect(() => {
-    getSingleService();
-  }, []);
+    const fetchService = async () => {
+      try {
+        const response = await addServiceId(serviceId);
+        setService(response.data);
+      } catch (error) {
+        console.log('error', error);
+      }
+    };
+
+    fetchService();
+  }, [serviceId]);
 
   return (
-    <div className='ServiceList'>
-      {service && (
-        <>
-          <h1>{service.serviceName}</h1>
-          <p>{service.description}</p>
-          <img src={service.imgURL} alt='' />
-        </>
-      )}
+    <div>
+      <h2>{service.name}</h2>
+      <h2>{service.description}</h2>
+      <h2>{service.company.adress}</h2>
     </div>
   );
 }

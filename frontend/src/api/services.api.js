@@ -22,6 +22,13 @@ export const getAllServices = () => {
   return axios.get(`${baseURL}/services`);
 };
 
+export const addServiceId = async (massageId, userId) => {
+  return axios.post(`${baseURL}/services/addmassagebyid`, {
+    massageId: massageId,
+    userId: userId,
+  });
+};
+
 export const getService = serviceType => {
   return axios.get(`${baseURL}/services/${serviceType}`);
 };
@@ -32,8 +39,4 @@ export const addService = service => {
 
 export const deleteService = id => {
   return axios.delete(`${baseURL}/services/${id}`);
-};
-
-export const upload = image => {
-  return axios.post(`${baseURL}/upload`, image);
 };
