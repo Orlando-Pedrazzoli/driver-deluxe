@@ -42,7 +42,10 @@ function BookingSection({ children }) {
     setTimeSlot(timeList);
   };
 
-  const saveBooking = () => {};
+  const saveBooking = () => {
+    console.log(date);
+    console.log(timeSlot);
+  };
 
   return (
     <div>

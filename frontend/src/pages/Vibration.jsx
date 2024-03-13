@@ -1,12 +1,24 @@
 import { useState, useEffect } from 'react';
 import { getService } from '@/api/services.api';
-import BookingSection from '@/components/BookingSection';
+import { useContext } from 'react';
 import vibrationImg from '../assets/vibration.png';
+import { DatePicker } from 'antd';
+import { TimePicker } from 'antd';
+import dayjs from 'dayjs';
+import { AuthContext } from '@/context/auth.context';
 
 function Vibration() {
   const [services, setServices] = useState();
-  /* 
-  const { serviceType } = useLocation(); */
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
+
+  const user = useContext(AuthContext);
+
+  const format = 'HH:mm';
+
+  const handleBooking = async () => {
+
+  }
 
   const getServices = async () => {
     try {
@@ -17,6 +29,16 @@ function Vibration() {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const handleDateChange = (date, dateString) => {
+    console.log(date, dateString);
+    setSelectedDate(dateString);
+  };
+
+  const handleTimeChange = (time, timeString) => {
+    console.log(time, timeString);
+    setSelectedTime(timeString);
   };
 
   useEffect(() => {
@@ -84,6 +106,13 @@ function Vibration() {
                 className='divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm'
                 key={service._id}
               >
+                <DatePicker onChange={handleDateChange} />
+                <TimePicker
+                  onChange={handleTimeChange}
+                  defaultValue={dayjs('12:00', format)}
+                  format={format}
+                />
+
                 <div className='p-6 sm:px-8'>
                   <h2 className='text-lg font-medium text-gray-900'>
                     {service.company.name}
@@ -105,16 +134,7 @@ function Vibration() {
                     </strong>
                   </p>
 
-                  <BookingSection>
-                    <div>
-                      <button
-                        type='button'
-                        className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-                      >
-                        Book Now
-                      </button>
-                    </div>
-                  </BookingSection>
+                  <button onClick={} >Book Now</button>
                 </div>
               </div>
             ))}

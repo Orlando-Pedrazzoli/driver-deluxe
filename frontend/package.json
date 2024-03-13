@@ -22,7 +22,7 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.17",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
-    "antd": "^5.14.2",
+    "antd": "^5.15.2",
     "axios": "^1.6.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
