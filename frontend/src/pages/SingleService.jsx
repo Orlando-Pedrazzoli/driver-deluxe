@@ -1,31 +1,44 @@
+import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { addServiceId } from '../api/services.api';
+import { getMassage } from '@/api/services.api';
 
-function SingleService() {
-  const { serviceId } = useParams();
-  const [service, setService] = useState();
+function ProductPage() {
+  const [service, setService] = useState(null);
+
+  const { itemId } = useParams();
+
+  const getSingleService = async () => {
+    try {
+      const response = await getMassage(itemId);
+      console.log(itemId);
+      console.log(response.data);
+      setService(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
-    const fetchService = async () => {
-      try {
-        const response = await addServiceId(serviceId);
-        setService(response.data);
-      } catch (error) {
-        console.log('error', error);
-      }
-    };
-
-    fetchService();
-  }, [serviceId]);
+    getSingleService();
+  }, []);
 
   return (
-    <div>
-      <h2>{service.name}</h2>
-      <h2>{service.description}</h2>
-      <h2>{service.company.adress}</h2>
-    </div>
+    <>
+      <div>
+        {service && (
+          <>
+            <img src={service.imgURL} alt='' />
+            <h1>{service.type}</h1>
+            <h1>{service.company.name}</h1>
+            <h1>{service.company.address}</h1>
+            <h1>{service.company.website}</h1>
+            <h1>{service.company.contact}</h1>
+            <Link to={`/${service.type}`}>GO BACK</Link>
+          </>
+        )}
+      </div>
+    </>
   );
 }
 
-export default SingleService;
+export default ProductPage;

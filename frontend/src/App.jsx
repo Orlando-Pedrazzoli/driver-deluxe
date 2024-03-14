@@ -11,6 +11,7 @@ import Vibration from './pages/Vibration';
 import Shiatsu from './pages/Shiatsu';
 import ChairMassage from './pages/ChairMassage';
 import Reflexology from './pages/Reflexology';
+import SingleService from './pages/SingleService';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/news' element={<News />} />
         <Route path='/services' element={<Services />} />
+        <Route path='/services/oneItem/:itemId' element={<SingleService />} />
         <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />

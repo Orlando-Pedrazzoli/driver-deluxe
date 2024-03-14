@@ -6,6 +6,7 @@ import { DatePicker } from 'antd';
 import { TimePicker } from 'antd';
 import dayjs from 'dayjs';
 import { AuthContext } from '@/context/auth.context';
+import { Link } from 'react-router-dom';
 
 function Vibration() {
   const [services, setServices] = useState();
@@ -16,9 +17,7 @@ function Vibration() {
 
   const format = 'HH:mm';
 
-  const handleBooking = async () => {
-
-  }
+  const handleBooking = async () => {};
 
   const getServices = async () => {
     try {
@@ -127,14 +126,16 @@ function Vibration() {
                   <p className='mt-2 text-gray-700'>
                     Website: {service.company.website}
                   </p>
+                  <p>ID: {service._id}</p>
 
                   <p className='mt-2 sm:mt-4'>
                     <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
                       {service.price}€
                     </strong>
                   </p>
-
-                  <button onClick={} >Book Now</button>
+                  <Link to={`/services/oneItem/${service._id}`}>
+                    <button>Book Now</button>
+                  </Link>
                 </div>
               </div>
             ))}

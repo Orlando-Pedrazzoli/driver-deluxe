@@ -40,3 +40,7 @@ export const addService = service => {
 export const deleteService = id => {
   return axios.delete(`${baseURL}/services/${id}`);
 };
+
+export const getMassage = itemId => {
+  return axios.get(`${baseURL}/services/oneItem/${itemId}`);
+};
