@@ -1,9 +1,20 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getMassage } from '@/api/services.api';
+import { useContext } from 'react';
+import { DatePicker } from 'antd';
+import { TimePicker } from 'antd';
+import { AuthContext } from '@/context/auth.context';
+import dayjs from 'dayjs';
 
 function ProductPage() {
   const [service, setService] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
+
+  const user = useContext(AuthContext);
+
+  const format = 'HH:mm';
 
   const { itemId } = useParams();
 
@@ -18,6 +29,16 @@ function ProductPage() {
     }
   };
 
+  const handleDateChange = (date, dateString) => {
+    console.log(date, dateString);
+    setSelectedDate(dateString);
+  };
+
+  const handleTimeChange = (time, timeString) => {
+    console.log(time, timeString);
+    setSelectedTime(timeString);
+  };
+
   useEffect(() => {
     getSingleService();
   }, []);
@@ -25,6 +46,12 @@ function ProductPage() {
   return (
     <>
       <div>
+        <DatePicker onChange={handleDateChange} />
+        <TimePicker
+          onChange={handleTimeChange}
+          defaultValue={dayjs('12:00', format)}
+          format={format}
+        />
         {service && (
           <>
             <img src={service.imgURL} alt='' />
