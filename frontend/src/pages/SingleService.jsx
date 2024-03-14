@@ -54,7 +54,7 @@ function ProductPage() {
         />
         {service && (
           <>
-            <img src={service.imgURL} alt='' />
+            <img src={service.imgURL} style={{ width: '300px' }} />
             <h1>{service.type}</h1>
             <h1>{service.company.name}</h1>
             <h1>{service.company.address}</h1>

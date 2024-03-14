@@ -1,16 +1,14 @@
 import { useState, useEffect } from 'react';
-import BookingSection from '@/components/BookingSection';
 import { getService } from '@/api/services.api';
+import { Link } from 'react-router-dom';
 import shiatsuImg from '../assets/shiatsu.png';
 
 function Shiatsu() {
   const [services, setServices] = useState();
-  /* 
-  const { serviceType } = useLocation(); */
 
   const getServices = async () => {
     try {
-      const response = await getService('vibration');
+      const response = await getService('shiatsu');
       console.log(response);
       console.log(response.data);
       setServices(response.data);
@@ -99,23 +97,14 @@ function Shiatsu() {
                   <p className='mt-2 text-gray-700'>
                     Website: {service.company.website}
                   </p>
-
                   <p className='mt-2 sm:mt-4'>
                     <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
                       {service.price}€
                     </strong>
                   </p>
-
-                  <BookingSection>
-                    <div>
-                      <button
-                        type='button'
-                        className='mt-4 block rounded border border-gray-500 bg-primary px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-black focus:outline-none focus:ring active:text-black sm:mt-6'
-                      >
-                        Book Now
-                      </button>
-                    </div>
-                  </BookingSection>
+                  <Link to={`/services/oneItem/${service._id}`}>
+                    <button>Book Now</button>
+                  </Link>
                 </div>
               </div>
             ))}
