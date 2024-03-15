@@ -59,3 +59,7 @@ export const deleteBooking = async (userId, bookingId) => {
     `${baseURL}/services/users/${userId}/bookings/${bookingId}`
   );
 };
+
+export const getUserBookings = async userId => {
+  return axios.get(`${baseURL}/users/${userId}/bookings`);
+};
