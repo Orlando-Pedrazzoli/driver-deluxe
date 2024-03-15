@@ -13,12 +13,15 @@ import ChairMassage from './pages/ChairMassage';
 import Reflexology from './pages/Reflexology';
 import SingleService from './pages/SingleService';
 import Bookings from './pages/Bookings';
+import IsAnon from './components/IsAnon';
+import IsPrivate from './components/IsPrivate';
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
+        <Route path='/bookings' element={<Bookings />} />
         <Route path='/' element={<Home />} />
         <Route path='/news' element={<News />} />
         <Route path='/services' element={<Services />} />
