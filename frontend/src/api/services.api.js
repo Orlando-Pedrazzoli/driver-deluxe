@@ -3,7 +3,6 @@ const baseURL = `${import.meta.env.VITE_SERVICES_API}/api`;
 
 const setAuthorisationHeaders = () => {
   axios.interceptors.request.use(config => {
-    // retrieve the token from the localStorage:
     const token = localStorage.getItem('authToken');
 
     if (token) {

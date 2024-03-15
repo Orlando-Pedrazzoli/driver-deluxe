@@ -18,7 +18,7 @@ function ServiceList() {
           <ul className='mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
             <Link to='/vibration'>
               <li>
-                <a href='#' className='group block overflow-hidden'>
+                <div href='#' className='group block overflow-hidden'>
                   <img
                     src={vibrationImg}
                     alt=''
@@ -34,13 +34,13 @@ function ServiceList() {
                       <span className='sr-only'> Regular Price </span>
                     </p>
                   </div>
-                </a>
+                </div>
               </li>
             </Link>
 
             <Link to='/reflexology'>
               <li>
-                <a href='#' className='group block overflow-hidden'>
+                <div href='#' className='group block overflow-hidden'>
                   <img
                     src={reflexologyImg}
                     alt=''
@@ -56,13 +56,13 @@ function ServiceList() {
                       <span className='sr-only'> Regular Price </span>
                     </p>
                   </div>
-                </a>
+                </div>
               </li>
             </Link>
 
             <Link to='/chairmassage'>
               <li>
-                <a href='#' className='group block overflow-hidden'>
+                <div href='#' className='group block overflow-hidden'>
                   <img
                     src={chairImg}
                     alt=''
@@ -78,13 +78,13 @@ function ServiceList() {
                       <span className='sr-only'> Regular Price </span>
                     </p>
                   </div>
-                </a>
+                </div>
               </li>
             </Link>
 
             <Link to='/shiatsu'>
               <li>
-                <a href='#' className='group block overflow-hidden'>
+                <div href='#' className='group block overflow-hidden'>
                   <img
                     src={shiatsuImg}
                     alt=''
@@ -100,7 +100,7 @@ function ServiceList() {
                       <span className='sr-only'> Regular Price </span>
                     </p>
                   </div>
-                </a>
+                </div>
               </li>
             </Link>
           </ul>

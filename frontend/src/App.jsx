@@ -21,18 +21,102 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/bookings' element={<Bookings />} />
-        <Route path='/' element={<Home />} />
-        <Route path='/news' element={<News />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/services/oneItem/:itemId' element={<SingleService />} />
-        <Route path='/contact-us' element={<ContactUs />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/vibration' element={<Vibration />} />
-        <Route path='/reflexology' element={<Reflexology />} />
-        <Route path='/chairmassage' element={<ChairMassage />} />
-        <Route path='/shiatsu' element={<Shiatsu />} />
+        <Route
+          path='/bookings'
+          element={
+            <IsPrivate>
+              <Bookings />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/'
+          element={
+            <IsPrivate>
+              <Home />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/news'
+          element={
+            <IsPrivate>
+              <News />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/services'
+          element={
+            <IsPrivate>
+              <Services />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/services/oneItem/:itemId'
+          element={
+            <IsPrivate>
+              <SingleService />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/contact-us'
+          element={
+            <IsPrivate>
+              <ContactUs />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/signup'
+          element={
+            <IsAnon>
+              <Signup />
+            </IsAnon>
+          }
+        />
+        <Route
+          path='/login'
+          element={
+            <IsAnon>
+              <Login />
+            </IsAnon>
+          }
+        />
+        <Route
+          path='/vibration'
+          element={
+            <IsPrivate>
+              <Vibration />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/reflexology'
+          element={
+            <IsPrivate>
+              <Reflexology />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/chairmassage'
+          element={
+            <IsPrivate>
+              <ChairMassage />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/shiatsu'
+          element={
+            <IsPrivate>
+              <Shiatsu />
+            </IsPrivate>
+          }
+        />
       </Routes>
       <Footer />
     </>
