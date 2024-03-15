@@ -12,6 +12,7 @@ import Shiatsu from './pages/Shiatsu';
 import ChairMassage from './pages/ChairMassage';
 import Reflexology from './pages/Reflexology';
 import SingleService from './pages/SingleService';
+import Bookings from './pages/Bookings';
 
 function App() {
   return (

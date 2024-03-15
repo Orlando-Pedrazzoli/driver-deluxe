@@ -44,3 +44,18 @@ export const deleteService = id => {
 export const getMassage = itemId => {
   return axios.get(`${baseURL}/services/oneItem/${itemId}`);
 };
+
+export const addBooking = async (user, massage, date, time) => {
+  return axios.post(`${baseURL}/services/newbooking`, {
+    user: user,
+    massage: massage,
+    date: date,
+    time: time,
+  });
+};
+
+export const deleteBooking = async (userId, bookingId) => {
+  return axios.delete(
+    `${baseURL}/services/users/${userId}/bookings/${bookingId}`
+  );
+};
