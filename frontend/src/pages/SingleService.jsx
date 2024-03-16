@@ -14,6 +14,8 @@ function ProductPage() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
 
+  const formattedServiceType = service ? formatServiceType(service.type) : '';
+
   const navigate = useNavigate();
 
   const { user } = useContext(AuthContext);
@@ -53,6 +55,10 @@ function ProductPage() {
       message.error('Failed to create booking'); // Show error message
     }
   };
+
+  function formatServiceType(serviceType) {
+    return serviceType.replace(/\s+/g, '').toLowerCase();
+  }
 
   useEffect(() => {
     getSingleService();
@@ -99,7 +105,7 @@ function ProductPage() {
                     >
                       Book now
                     </button>
-                    <Link to={`/${service.type}`}>
+                    <Link to={`/${formattedServiceType}`}>
                       <button className='mt-8 ml-6 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400'>
                         Go Back
                       </button>
