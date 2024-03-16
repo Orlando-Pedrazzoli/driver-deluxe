@@ -7,7 +7,7 @@ function IsPrivate(props) {
 
   // if the authentication is still loading:
   if (isLoading) {
-    <p>Loading...</p>;
+    return <p>Loading...</p>;
   }
   // if the user is not logged in:
   if (!isLoggedIn) {
