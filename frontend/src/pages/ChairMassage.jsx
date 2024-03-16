@@ -100,7 +100,9 @@ function ChairMassage() {
                     </strong>
                   </p>
                   <Link to={`/services/oneItem/${service._id}`}>
-                    <button>Book Now</button>
+                    <button className='inline-block rounded bg-indigo-600 px-8 py-3 mt-6 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500'>
+                      Details
+                    </button>
                   </Link>
                 </div>
               </div>
