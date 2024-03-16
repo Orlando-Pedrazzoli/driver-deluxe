@@ -61,24 +61,55 @@ function ProductPage() {
   return (
     <>
       <div>
-        <DatePicker onChange={handleDateChange} />
-        <TimePicker
-          onChange={handleTimeChange}
-          defaultValue={dayjs('12:00', format)}
-          format={format}
-        />
         {service && (
           <>
-            <img src={service.imgURL} style={{ width: '300px' }} />
-            <h1>{service.type}</h1>
-            <h1>{service.company.name}</h1>
-            <h1>{service.company.address}</h1>
-            <h1>{service.company.website}</h1>
-            <h1>{service.company.contact}</h1>
-            <Link to={`/${service.type}`}>GO BACK</Link>
+            <section>
+              <div className='mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
+                <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 mt-4'>
+                  <div className='relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full'>
+                    <img
+                      alt=''
+                      src={service.imgURL}
+                      className='absolute inset-0 h-full w-full object-cover'
+                    />
+                  </div>
+
+                  <div className='lg:py-24'>
+                    <h2 className='text-3xl font-bold sm:text-4xl mb-4'>
+                      {service.type}
+                    </h2>
+                    <DatePicker onChange={handleDateChange} />
+                    <TimePicker
+                      className='m-4'
+                      onChange={handleTimeChange}
+                      defaultValue={dayjs('12:00', format)}
+                      format={format}
+                    />
+                    <h1 className='text-gray-800'>{service.company.name}</h1>
+                    <p>{service.company.address}</p>
+                    <p>Tel: {service.company.contact}</p>
+                    <p className='mt-4 text-gray-600'>
+                      {service.company.website}
+                    </p>
+                    <p className='mt-4 text-gray-600'>{service.description}</p>
+
+                    <button
+                      onClick={handleBookNow}
+                      className='mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400'
+                    >
+                      Book now
+                    </button>
+                    <Link to={`/${service.type}`}>
+                      <button className='mt-8 ml-6 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400'>
+                        Go Back
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </section>
           </>
         )}
-        <button onClick={handleBookNow}>Book Now</button>
       </div>
     </>
   );
