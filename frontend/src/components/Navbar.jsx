@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Dropdown from '../components/Dropdown';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -74,13 +74,14 @@ function Navbar() {
               News
             </Link>
           </li>
+
           <li className='nav-item'>
             <Link
-              to='/contact-us'
+              to='/bookings'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Contact Us
+              Bookings
             </Link>
           </li>
 

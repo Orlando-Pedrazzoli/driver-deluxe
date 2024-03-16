@@ -40,7 +40,7 @@ function Bookings() {
   }, []);
   return (
     <div>
-      <h2 className='text-xl font-semibold'>Your Bookings</h2>
+      <h2 className='text-xl font-semibold p-4'>Your Bookings</h2>
       {bookings &&
         bookings.map(booking => (
           <div key={booking._id}>
