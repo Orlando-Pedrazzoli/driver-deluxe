@@ -14,6 +14,7 @@ function Bookings() {
   const getBookings = async () => {
     try {
       const response = await getUserBookings(user._id);
+      console.log(response.data);
       setBookings(response.data);
     } catch (error) {
       console.log(error);
@@ -23,8 +24,11 @@ function Bookings() {
   const handleDeleteBooking = async (userId, bookingId) => {
     try {
       await deleteBooking(userId, bookingId);
+
       message.success('Booking deleted successfully');
-      //? how to update state to remove the deleted booking from the UI
+      setBookings(prevBookings =>
+        prevBookings.filter(booking => booking._id !== bookingId)
+      );
     } catch (error) {
       console.log(error);
       message.error('Failed to delete booking');
@@ -42,6 +46,8 @@ function Bookings() {
           <div key={booking._id}>
             <p>Date: {booking.date}</p>
             <p>Time: {booking.time}</p>
+            <p>Company Name: {booking.massage.company.name}</p>
+            <p>Company Address: {booking.massage.company.address}</p>
             <button onClick={() => handleDeleteBooking(user._id, booking._id)}>
               Delete Booking
             </button>

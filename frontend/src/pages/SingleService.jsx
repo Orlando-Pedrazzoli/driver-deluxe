@@ -14,6 +14,8 @@ function ProductPage() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
 
+  const navigate = useNavigate();
+
   const { user } = useContext(AuthContext);
 
   const format = 'HH:mm';
@@ -45,7 +47,7 @@ function ProductPage() {
     try {
       await addBooking(user._id, service._id, selectedDate, selectedTime);
       message.success('Booking created successfully'); // Show success message
-      useNavigate('/bookings');
+      navigate('/bookings');
     } catch (error) {
       console.log(error);
       message.error('Failed to create booking'); // Show error message
