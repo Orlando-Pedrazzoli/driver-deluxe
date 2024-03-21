@@ -15,6 +15,7 @@ import SingleService from './pages/SingleService';
 import Bookings from './pages/Bookings';
 import IsAnon from './components/IsAnon';
 import IsPrivate from './components/IsPrivate';
+import MapsComponent from './components/MapsComponent';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           path='/bookings'
           element={
             <IsPrivate>
-              <Bookings />
+              <Bookings MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />

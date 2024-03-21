@@ -6,7 +6,7 @@ import { deleteBooking } from '@/api/services.api';
 import { message } from 'antd';
 import { useEffect } from 'react';
 
-function Bookings() {
+function Bookings({ MapsComponent }) {
   const { user } = useContext(AuthContext);
 
   const [bookings, setBookings] = useState(null);
@@ -120,6 +120,7 @@ function Bookings() {
                 </li>
               </ul>
             </div>
+            <MapsComponent />
           </div>
         ))}
     </div>
