@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { getService } from '@/api/services.api';
 import { Link } from 'react-router-dom';
-import reflexologyImg from '../assets/reflexology.png';
+import chairImg from '../../assets/chairmassage.png';
 
-function Reflexology() {
+function ChairMassage() {
   const [services, setServices] = useState();
 
   const getServices = async () => {
     try {
-      const response = await getService('reflexology');
+      const response = await getService('chairmassage');
       console.log(response);
       console.log(response.data);
       setServices(response.data);
@@ -41,13 +41,12 @@ function Reflexology() {
                 ></path>
               </svg>
               <div className='space-y-2'>
-                <p className='text-lg font-medium leadi'>Reflexology:</p>
+                <p className='text-lg font-medium leadi'>Chair Massage:</p>
                 <p className='leadi'>
-                  During a typical reflexology massage, reflex points on the
-                  foot are subjected to gentle pressure. Each of these points is
-                  said to be connected to a specific part of the body, including
-                  internal organs. The aim of the therapy is to reduce stress
-                  while alleviating minor ailments.
+                  Chair massage - also known as seated massage - is a type of
+                  massage that takes place on an traditional massage chair,
+                  designed to take the weight off the spine and give easy access
+                  to the head, neck, back, shoulders and arms.
                 </p>
               </div>
             </div>
@@ -55,7 +54,7 @@ function Reflexology() {
           <div className='lg:w-1/2 xl:w-3/5 bg-gray-200'>
             <div className='flex items-center justify-center p-4 md:p-8 lg:p-12 relative group'>
               <img
-                src={reflexologyImg}
+                src={chairImg}
                 alt='Description of Image'
                 className='rounded-lg shadow-lg bg-gray-500 aspect-video sm:min-h-96 transition duration-500 ease-in-out transform group-hover:scale-110'
               />
@@ -114,4 +113,4 @@ function Reflexology() {
   );
 }
 
-export default Reflexology;
+export default ChairMassage;

@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { getService } from '@/api/services.api';
-import vibrationImg from '../assets/vibration.png';
 import { Link } from 'react-router-dom';
+import shiatsuImg from '../../assets/shiatsu.png';
 
-function Vibration() {
+function Shiatsu() {
   const [services, setServices] = useState();
 
   const getServices = async () => {
     try {
-      const response = await getService('vibration');
+      const response = await getService('shiatsu');
       console.log(response);
       console.log(response.data);
       setServices(response.data);
@@ -42,13 +42,14 @@ function Vibration() {
                 ></path>
               </svg>
               <div className='space-y-2'>
-                <p className='text-lg font-medium leadi'>Vibration:</p>
+                <p className='text-lg font-medium leadi'>Shiatsu:</p>
                 <p className='leadi'>
-                  Vibrations are a massage technique in which tissues are
-                  pressed and released in an up and down movement. A vibration
-                  massage creates a vibrating and shaking motion onto the
-                  muscles that can be performed in a soothing or stimulating
-                  way.
+                  In the Japanese language, shiatsu means `finger pressure`.
+                  Shiatsu techniques include massages with fingers, thumbs,
+                  elbow, knuckle, feet and palms; acupressure, assisted
+                  stretching; and joint manipulation and mobilization. To
+                  examine a patient, a shiatsu practitioner uses palpation and,
+                  sometimes, pulse diagnosis.
                 </p>
               </div>
             </div>
@@ -56,7 +57,7 @@ function Vibration() {
           <div className='lg:w-1/2 xl:w-3/5 bg-gray-200'>
             <div className='flex items-center justify-center p-4 md:p-8 lg:p-12 relative group'>
               <img
-                src={vibrationImg}
+                src={shiatsuImg}
                 alt='Description of Image'
                 className='rounded-lg shadow-lg bg-gray-500 aspect-video sm:min-h-96 transition duration-500 ease-in-out transform group-hover:scale-110'
               />
@@ -115,4 +116,4 @@ function Vibration() {
   );
 }
 
-export default Vibration;
+export default Shiatsu;

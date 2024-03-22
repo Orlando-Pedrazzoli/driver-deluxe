@@ -1,7 +1,6 @@
 import { useState, useContext } from 'react';
 import { AuthContext } from '@/context/auth.context';
 import Dropdown from '../components/Dropdown';
-import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -40,7 +39,9 @@ function Navbar() {
       {!isLoggedIn ? (
         <nav className='navbar'>
           <div className='navbar-logo font-semibold'>
-            <p>DRIVER CARE</p>
+            <Link to='/'>
+              <p>DRIVER CARE</p>
+            </Link>
           </div>
           <ul className='nav-menu'>
             <li className='nav-item-auth'>
@@ -78,8 +79,6 @@ function Navbar() {
           </div>
 
           <ul className={click ? 'nav-menu active ' : 'nav-menu'}>
-            {/* Render other navbar items here */}
-            {/* Make sure to handle other navbar items */}
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home
@@ -96,24 +95,34 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Services <FontAwesomeIcon icon={faCaretDown} />
-              </Link>
-              {dropdown && <Dropdown />}
-            </li>
-
-            <li className='nav-item'>
-              <Link to='/news' className='nav-links' onClick={closeMobileMenu}>
-                News
+                Massages <FontAwesomeIcon />
               </Link>
             </li>
-
-            <li className='nav-item'>
+            <li
+              className='nav-item'
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
               <Link
-                to='/bookings'
+                to='/tourpage'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Bookings
+                Tours <FontAwesomeIcon />
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/maintenance'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Vehicle Maintenance
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/news' className='nav-links' onClick={closeMobileMenu}>
+                TVDE News
               </Link>
             </li>
 

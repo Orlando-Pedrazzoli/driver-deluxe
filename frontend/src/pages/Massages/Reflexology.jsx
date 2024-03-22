@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';
-import { getService } from '@/api/services.api';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import chairImg from '../assets/chairmassage.png';
+import { getService } from '@/api/services.api';
+import reflexologyImg from '../../assets/reflexology.png';
+import MapsComponent from '../../components/MapsComponent';
 
-function ChairMassage() {
+function Reflexology() {
   const [services, setServices] = useState();
+  const [showMap, setShowMap] = useState(false); // State to control map visibility
 
   const getServices = async () => {
     try {
-      const response = await getService('chairmassage');
-      console.log(response);
-      console.log(response.data);
+      const response = await getService('reflexology');
       setServices(response.data);
     } catch (error) {
       console.log(error);
@@ -20,6 +20,7 @@ function ChairMassage() {
   useEffect(() => {
     getServices();
   }, []);
+
   return (
     <>
       <section className='bg-white text-gray-100 mt-12'>
@@ -41,12 +42,13 @@ function ChairMassage() {
                 ></path>
               </svg>
               <div className='space-y-2'>
-                <p className='text-lg font-medium leadi'>Chair Massage:</p>
+                <p className='text-lg font-medium leadi'>Reflexology:</p>
                 <p className='leadi'>
-                  Chair massage - also known as seated massage - is a type of
-                  massage that takes place on an traditional massage chair,
-                  designed to take the weight off the spine and give easy access
-                  to the head, neck, back, shoulders and arms.
+                  During a typical reflexology massage, reflex points on the
+                  foot are subjected to gentle pressure. Each of these points is
+                  said to be connected to a specific part of the body, including
+                  internal organs. The aim of the therapy is to reduce stress
+                  while alleviating minor ailments.
                 </p>
               </div>
             </div>
@@ -54,7 +56,7 @@ function ChairMassage() {
           <div className='lg:w-1/2 xl:w-3/5 bg-gray-200'>
             <div className='flex items-center justify-center p-4 md:p-8 lg:p-12 relative group'>
               <img
-                src={chairImg}
+                src={reflexologyImg}
                 alt='Description of Image'
                 className='rounded-lg shadow-lg bg-gray-500 aspect-video sm:min-h-96 transition duration-500 ease-in-out transform group-hover:scale-110'
               />
@@ -109,8 +111,19 @@ function ChairMassage() {
             ))}
         </div>
       </div>
+      {/* Render MapsComponent conditionally */}
+      {showMap && <MapsComponent />}
+      {/* Button to toggle map visibility */}
+      <div className='flex justify-center mt-8'>
+        <button
+          onClick={() => setShowMap(!showMap)}
+          className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+        >
+          {showMap ? 'Hide Map' : 'Show Map'}
+        </button>
+      </div>
     </>
   );
 }
 
-export default ChairMassage;
+export default Reflexology;

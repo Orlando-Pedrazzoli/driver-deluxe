@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { getService } from '@/api/services.api';
+import vibrationImg from '../../assets/vibration.png';
+import marker1 from '../../assets/marker1.png';
 import { Link } from 'react-router-dom';
-import shiatsuImg from '../assets/shiatsu.png';
 
-function Shiatsu() {
+function Vibration({ MapsComponent }) {
   const [services, setServices] = useState();
 
   const getServices = async () => {
     try {
-      const response = await getService('shiatsu');
+      const response = await getService('vibration');
       console.log(response);
       console.log(response.data);
       setServices(response.data);
@@ -42,22 +43,31 @@ function Shiatsu() {
                 ></path>
               </svg>
               <div className='space-y-2'>
-                <p className='text-lg font-medium leadi'>Shiatsu:</p>
+                <p className='text-lg font-medium leadi'>Vibration:</p>
                 <p className='leadi'>
-                  In the Japanese language, shiatsu means `finger pressure`.
-                  Shiatsu techniques include massages with fingers, thumbs,
-                  elbow, knuckle, feet and palms; acupressure, assisted
-                  stretching; and joint manipulation and mobilization. To
-                  examine a patient, a shiatsu practitioner uses palpation and,
-                  sometimes, pulse diagnosis.
+                  Vibrations are a massage technique in which tissues are
+                  pressed and released in an up and down movement. A vibration
+                  massage creates a vibrating and shaking motion onto the
+                  muscles that can be performed in a soothing or stimulating
+                  way.
                 </p>
+                <h1 className='font-semibold'>
+                  Common body parts treated by vibrations
+                </h1>
+                <ul>
+                  <li>Shoulder</li>
+                  <li>Arm</li>
+                  <li>Upper back</li>
+                  <li>Lower back</li>
+                  <li>Calf</li>
+                </ul>
               </div>
             </div>
           </div>
           <div className='lg:w-1/2 xl:w-3/5 bg-gray-200'>
             <div className='flex items-center justify-center p-4 md:p-8 lg:p-12 relative group'>
               <img
-                src={shiatsuImg}
+                src={vibrationImg}
                 alt='Description of Image'
                 className='rounded-lg shadow-lg bg-gray-500 aspect-video sm:min-h-96 transition duration-500 ease-in-out transform group-hover:scale-110'
               />
@@ -75,36 +85,52 @@ function Shiatsu() {
           </div>
         </div>
       </section>
+
+      <MapsComponent />
       <div className='m-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <div className=' grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8'>
+        <h1 className='text-center font-semibold text-2xl mb-6'>
+          Check all Massage Houses on the map with blue icon
+          <img src={marker1} alt='Icon' className='inline-block h-8 w-8 ml-2' />
+        </h1>
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8'>
           {services &&
             services.map(service => (
               <div
                 className='divide-y divide-gray-200 rounded-2xl border border-gray-200 shadow-sm'
                 key={service._id}
               >
-                <div className='p-6 sm:px-8'>
+                <div className='p-6 sm:p-8'>
                   <h2 className='text-lg font-medium text-gray-900'>
                     {service.company.name}
                   </h2>
-
                   <p className='mt-2 text-gray-700'>
-                    Address: {service.company.address}
+                    {service.company.address}
                   </p>
                   <p className='mt-2 text-gray-700'>
                     Contact: {service.company.contact}
                   </p>
-                  <p className='mt-2 text-gray-700'>
-                    Website: {service.company.website}
-                  </p>
-                  <p className='mt-2 sm:mt-4'>
-                    <strong className='text-3xl font-bold text-gray-900 sm:text-4xl'>
+                  <p className='mt-4'>
+                    <strong className='text-3xl font-bold text-gray-900'>
                       {service.price}€
                     </strong>
                   </p>
                   <Link to={`/services/oneItem/${service._id}`}>
-                    <button className='inline-block rounded bg-indigo-600 px-8 py-3 mt-6 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500'>
-                      Details
+                    <button class='flex items-center mt-4 bg-blue-500 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-blue-400 duration-300 hover:gap-2 hover:translate-x-3'>
+                      View details
+                      <svg
+                        class='w-5 h-5'
+                        stroke='currentColor'
+                        stroke-width='1.5'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                        xmlns='http://www.w3.org/2000/svg'
+                      >
+                        <path
+                          d='M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5'
+                          stroke-linejoin='round'
+                          stroke-linecap='round'
+                        ></path>
+                      </svg>
                     </button>
                   </Link>
                 </div>
@@ -116,4 +142,4 @@ function Shiatsu() {
   );
 }
 
-export default Shiatsu;
+export default Vibration;

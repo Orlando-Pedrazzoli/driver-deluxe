@@ -7,7 +7,6 @@ function News() {
   const getArticles = async () => {
     try {
       const response = await getNews();
-      console.log(response.data);
       setNews(response.data.articles);
     } catch (error) {
       console.log(error);
@@ -19,66 +18,46 @@ function News() {
   }, []);
 
   return (
-    <>
-      <div>
-        <h1>Latest News</h1>
-        {news &&
-          news.map((article, index) => (
-            <div
-              key={index}
-              className='overflow-hidden rounded-lg shadow transition hover:shadow-lg'
-            >
-              <img
-                alt='articleImg'
-                src={article.urlToImage}
-                style={{ width: '200px' }}
-              />
-
-              <div className='bg-white p-4 sm:p-6'>
-                <time
-                  dateTime={article.publishedAt}
-                  className='block text-xs text-gray-500'
-                >
-                  {article.publishedAt}
-                </time>
-
-                <div href='#'>
-                  <h3 className='mt-0.5 text-lg text-gray-900'>
+    <div className='max-w-screen-xl p-5 mx-auto dark:bg-gray-800 dark:text-gray-100'>
+      <h1 className='text-4xl font-bold text-center mb-8'>Latest News</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+        {news.map((article, index) => {
+          if (index !== 0) {
+            return (
+              <div
+                key={index}
+                className='max-w-sm rounded overflow-hidden shadow-lg dark:bg-gray-500'
+              >
+                <img
+                  className='w-full'
+                  src={article.urlToImage}
+                  alt='Article'
+                />
+                <div className='px-6 py-4'>
+                  <div className='font-bold text-xl mb-2 dark:text-gray-100'>
                     {article.title}
-                  </h3>
-                  <h3 className='mt-0.5 text-lg text-gray-900'>
-                    Author: {article.author}
-                  </h3>
+                  </div>
+                  <p className='text-gray-700 text-base dark:text-gray-400'>
+                    {article.content}
+                  </p>
                 </div>
-
-                <p className='mt-2 line-clamp-3 text-sm/relaxed text-gray-500'>
-                  {article.content}
-                </p>
-                {article.url && <a href={article.url}>Read More</a>}
+                <div className='px-6 py-4'>
+                  <span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 dark:bg-gray-700 dark:text-gray-400'>
+                    {article.category}
+                  </span>
+                  <span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 dark:bg-gray-700 dark:text-gray-400'>
+                    {article.publishedAt}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          } else {
+            return null;
+          }
+        })}
       </div>
-    </>
+    </div>
   );
 }
 
-/* {news &&
-  news.map((article, index) => (
-    <div key={index}>
-      <h2>{article.title}</h2>
-      <p>Author: {article.author}</p>
-      <p>Published at: {article.publishedAt}</p>
-      {article.url && <a href={article.url}>Read More</a>}
-      {article.urlToImage && (
-        <img
-          style={{ width: '100px' }}
-          src={article.urlToImage}
-          alt='Article'
-        />
-      )}
-      <p>{article.content}</p>
-      <hr />
-    </div>
-  ))} */
 export default News;

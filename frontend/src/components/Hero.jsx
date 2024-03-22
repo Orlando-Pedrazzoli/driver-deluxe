@@ -1,43 +1,74 @@
-import React from 'react';
-import hero_img from '../assets/img-hero.png';
+import { Stars } from '@react-three/drei';
 import { Link } from 'react-router-dom';
+import { Canvas } from '@react-three/fiber';
+import React, { useEffect } from 'react';
+import { FiArrowRight } from 'react-icons/fi';
+import {
+  useMotionTemplate,
+  useMotionValue,
+  motion,
+  animate,
+} from 'framer-motion';
+
+const COLORS_TOP = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C'];
 
 function Hero() {
+  const color = useMotionValue(COLORS_TOP[0]);
+
+  useEffect(() => {
+    animate(color, COLORS_TOP, {
+      ease: 'easeInOut',
+      duration: 10,
+      repeat: Infinity,
+      repeatType: 'mirror',
+    });
+  }, []);
+
+  const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
+  const border = useMotionTemplate`1px solid ${color}`;
+  const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
+
   return (
-    <section>
-      <div className='mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16'>
-          <div className='relative h-64 overflow-hidden sm:h-80 lg:order-last lg:h-full'>
-            <img src={hero_img} alt='' className='rounded-lg' />
-          </div>
-
-          <div className='lg:py-24'>
-            <h2 className='text-3xl font-bold sm:text-4xl'>
-              Find & Book Appointment
-            </h2>
-
-            <p className='mt-5 text-gray-600'>
-              As drivers, we often overlook the importance of maintaining a
-              relaxed and focused state behind the wheel. However, driving
-              safely not only safeguards our well-being but also enhances the
-              overall journey experience. <br /> With our innovative massage
-              app, drivers can discover the finest massage spots across
-              Portugal, ensuring a rejuvenating experience awaits at every turn.
-              By prioritizing safety and comfort during your travels, our app
-              not only promotes responsible driving habits but also encourages a
-              holistic approach to well-being.
-            </p>
-
-            <Link
-              to='/services'
-              className='mt-8 inline-block rounded bg-primary px-10 py-3 text-sm font-medium text-white transition hover:bg-blue-600 f'
-            >
-              Book Now
-            </Link>
-          </div>
-        </div>
+    <motion.section
+      style={{
+        backgroundImage,
+      }}
+      className='relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200 mb-6'
+    >
+      <div className='relative z-10 flex flex-col items-center'>
+        <h1 className='max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight'>
+          Welcome, Drivers! Enjoy Exclusive Benefits with Us
+        </h1>
+        <p className='my-10 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed'>
+          Ready to hit the road with confidence and savings? Sign up now and
+          let's embark on this exciting journey together!
+        </p>
+        <Link to='/services'>
+          <motion.button
+            style={{
+              border,
+              boxShadow,
+            }}
+            whileHover={{
+              scale: 1.015,
+            }}
+            whileTap={{
+              scale: 0.985,
+            }}
+            className='group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-6 py-2 text-gray-50 transition-colors hover:bg-gray-950/50'
+          >
+            Explore
+            <FiArrowRight className='transition-transform group-hover:-rotate-45 group-active:-rotate-12' />
+          </motion.button>
+        </Link>
       </div>
-    </section>
+
+      <div className='absolute inset-0 z-0'>
+        <Canvas>
+          <Stars radius={50} count={2500} factor={4} fade speed={2} />
+        </Canvas>
+      </div>
+    </motion.section>
   );
 }
 

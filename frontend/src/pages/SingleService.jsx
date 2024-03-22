@@ -86,7 +86,7 @@ function ProductPage() {
                     </h2>
                     <DatePicker onChange={handleDateChange} />
                     <TimePicker
-                      className='m-4'
+                      className='m-4 '
                       onChange={handleTimeChange}
                       defaultValue={dayjs('12:00', format)}
                       format={format}
@@ -101,12 +101,12 @@ function ProductPage() {
 
                     <button
                       onClick={handleBookNow}
-                      className='mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400'
+                      className='mt-8 inline-block rounded bg-blue-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-600 focus:outline-none focus:ring focus:ring-yellow-400'
                     >
                       Book now
                     </button>
                     <Link to={`/${formattedServiceType}`}>
-                      <button className='mt-8 ml-6 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400'>
+                      <button className='mt-8 ml-6 inline-block rounded bg-blue-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-600 focus:outline-none focus:ring focus:ring-yellow-400'>
                         Go Back
                       </button>
                     </Link>

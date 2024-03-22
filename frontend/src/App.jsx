@@ -7,15 +7,17 @@ import News from './pages/News';
 import Services from './pages/Services';
 import ContactUs from './pages/ContactUs';
 import Footer from './components/Footer';
-import Vibration from './pages/Vibration';
-import Shiatsu from './pages/Shiatsu';
-import ChairMassage from './pages/ChairMassage';
-import Reflexology from './pages/Reflexology';
+import Vibration from './pages/Massages/Vibration';
+import Shiatsu from './pages/Massages/Shiatsu';
+import ChairMassage from './pages/Massages/ChairMassage';
+import Reflexology from './pages/Massages/Reflexology';
 import SingleService from './pages/SingleService';
 import Bookings from './pages/Bookings';
 import IsAnon from './components/IsAnon';
 import IsPrivate from './components/IsPrivate';
 import MapsComponent from './components/MapsComponent';
+import TourPage from './pages/TourPage';
+import Maintenance from './pages/Maintenance';
 
 function App() {
   return (
@@ -33,9 +35,9 @@ function App() {
         <Route
           path='/'
           element={
-            <IsPrivate>
+            <IsAnon>
               <Home />
-            </IsPrivate>
+            </IsAnon>
           }
         />
         <Route
@@ -51,6 +53,22 @@ function App() {
           element={
             <IsPrivate>
               <Services />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/tourpage'
+          element={
+            <IsPrivate>
+              <TourPage />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/maintenance'
+          element={
+            <IsPrivate>
+              <Maintenance />
             </IsPrivate>
           }
         />
@@ -90,7 +108,7 @@ function App() {
           path='/vibration'
           element={
             <IsPrivate>
-              <Vibration />
+              <Vibration MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
