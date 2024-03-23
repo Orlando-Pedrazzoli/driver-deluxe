@@ -64,7 +64,7 @@
 
 @media screen and (max-width: 960px) {
   .NavbarItems {
-    position: relative;
+    position: absolute;
   }
 
   .nav-menu {
@@ -84,7 +84,7 @@
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 2;
   }
 
   .nav-links {
@@ -96,6 +96,7 @@
 
   .nav-links:hover {
     background-color: #1888ff;
+    display: absolute;
     border-radius: 0;
   }
 
