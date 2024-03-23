@@ -63,7 +63,7 @@ function Hero() {
         </Link>
       </div>
 
-      <div className='absolute inset-0 z-0'>
+      <div className='relative inset-0 z-0'>
         <Canvas>
           <Stars radius={50} count={2500} factor={4} fade speed={2} />
         </Canvas>
