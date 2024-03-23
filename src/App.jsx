@@ -24,6 +24,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route
           path='/bookings'
           element={
@@ -32,14 +33,7 @@ function App() {
             </IsPrivate>
           }
         />
-        <Route
-          path='/'
-          element={
-            <IsAnon>
-              <Home />
-            </IsAnon>
-          }
-        />
+
         <Route
           path='/news'
           element={
