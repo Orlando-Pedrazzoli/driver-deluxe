@@ -18,6 +18,10 @@ import IsPrivate from './components/IsPrivate';
 import MapsComponent from './components/MapsComponent';
 import TourPage from './pages/TourPage';
 import Maintenance from './pages/Maintenance';
+import Boschcar from './pages/MaintenaceCar/Boschcar';
+import Norauto from './pages/MaintenaceCar/Norauto';
+import Euromaster from './pages/MaintenaceCar/Euromaster';
+import Mforce from './pages/MaintenaceCar/Mforce';
 
 function App() {
   return (
@@ -127,6 +131,38 @@ function App() {
           element={
             <IsPrivate>
               <Shiatsu />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/boschcarservice'
+          element={
+            <IsPrivate>
+              <Boschcar />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/norauto'
+          element={
+            <IsPrivate>
+              <Norauto />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/euromaster'
+          element={
+            <IsPrivate>
+              <Euromaster />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/mforce'
+          element={
+            <IsPrivate>
+              <Mforce />
             </IsPrivate>
           }
         />
