@@ -18,5 +18,5 @@ const setAuthorisationHeaders = () => {
 setAuthorisationHeaders();
 
 export const getGoogleMaps = () => {
-  return axios.get(`${baseURL}/allmaps`);
+  return axios.get(`${baseURL}/key`);
 };
