@@ -16,7 +16,7 @@ function Maintenance() {
           </header>
 
           <ul className='mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
-            <Link to='/vibration'>
+            <Link to='/boschcarservice'>
               <li>
                 <div href='#' className='group block overflow-hidden'>
                   <img
@@ -38,7 +38,7 @@ function Maintenance() {
               </li>
             </Link>
 
-            <Link to='/reflexology'>
+            <Link to='/euromaster'>
               <li>
                 <div href='#' className='group block overflow-hidden'>
                   <img
@@ -60,7 +60,7 @@ function Maintenance() {
               </li>
             </Link>
 
-            <Link to='/chairmassage'>
+            <Link to='/mforce'>
               <li>
                 <div href='#' className='group block overflow-hidden'>
                   <img
@@ -82,7 +82,7 @@ function Maintenance() {
               </li>
             </Link>
 
-            <Link to='/shiatsu'>
+            <Link to='/norauto'>
               <li>
                 <div href='#' className='group block overflow-hidden'>
                   <img
