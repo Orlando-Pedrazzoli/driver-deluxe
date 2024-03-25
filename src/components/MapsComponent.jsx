@@ -1,24 +1,5 @@
 import React, { useState } from 'react';
-import markerIcon1 from '../assets/marker1.png';
-import markerIcon2 from '../assets/marker2.png';
-import img1 from '../assets/terraheal.png';
-import img2 from '../assets/ecomassage.png';
-import img3 from '../assets/thaimassage.png';
-import img4 from '../assets/sensual.png';
-import img5 from '../assets/botanica.png';
-import img6 from '../assets/corinthia.png';
-import {
-  GoogleMap,
-  useJsApiLoader,
-  Marker,
-  InfoWindow,
-} from '@react-google-maps/api';
-
-const markerIcons = {
-  0: markerIcon1,
-  1: markerIcon2,
-  // Define other marker icons as needed
-};
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '70%',
@@ -33,58 +14,20 @@ const center = {
 
 const points = [
   {
-    lat: 38.714906,
-    lng: -9.131064,
-    link: 'https://www.terraheal.com/',
-    cardContent: (
-      <img src={img1} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-    address: 'R. do Telhal 4b, 1150-321 Lisboa',
+    lat: 38.712211,
+    lng: -9.135951,
   },
   {
-    lat: 38.712597,
-    lng: -9.135928,
-    link: 'https://www.ecomassage.com/?lang=pt-pt',
-    cardContent: (
-      <img src={img2} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-    address: 'R. dos Fanqueiros 110, 1100-232 Lisboa',
+    lat: 38.709841,
+    lng: -9.138871,
   },
   {
-    lat: 38.715314,
-    lng: -9.140018,
-    link: 'https://www.myothaimassage.pt/',
-    cardContent: (
-      <img src={img3} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-    address: 'R. dos Sapateiros 41, 1100-060 Lisboa',
+    lat: 38.735346,
+    lng: -9.160083,
   },
   {
-    lat: 38.711962,
-    lng: -9.138024,
-    link: 'https://massagem-sensual.com/pt/',
-    cardContent: (
-      <img src={img4} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-    address: 'R. da Madalena 215, Lisbon',
-  },
-  {
-    lat: 38.731145,
-    lng: -9.160203,
-    link: 'https://thebotanicalmassage.com/',
-    cardContent: (
-      <img src={img5} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-    address: 'Calçada do Sacramento 20, 1200-394 Lisboa',
-  },
-  {
-    lat: 38.712922,
-    lng: -9.141686,
-    link: 'https://www.corinthia.com/pt-pt/lisbon/the-spa-by-corinthia-lisbon/',
-    cardContent: (
-      <img src={img6} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-    address: 'Av. Columbano Bordalo Pinheiro 105, 1099-031 Lisbon',
+    lat: 38.708287,
+    lng: -9.140492,
   },
 ];
 
@@ -95,8 +38,7 @@ function MapsComponent() {
   });
 
   const [map, setMap] = useState(null);
-  const [selectedPoint, setSelectedPoint] = useState(null);
-  const [showCard, setShowCard] = useState(false); // State to manage card visibility
+  const [searchAddress, setSearchAddress] = useState('');
 
   const onLoad = React.useCallback(function callback(map) {
     setMap(map);
@@ -106,30 +48,48 @@ function MapsComponent() {
     setMap(null);
   }, []);
 
-  const handleMarkerClick = point => {
-    setSelectedPoint(point);
-    setShowCard(false); // Hide card when marker is clicked
+  const handleSearchChange = event => {
+    setSearchAddress(event.target.value);
   };
 
-  const handleInfoWindowClose = () => {
-    setSelectedPoint(null);
-    setShowCard(false); // Hide card when info window is closed
-  };
-
-  const handleLinkMouseEnter = () => {
-    setShowCard(true); // Show card when mouse enters the link
-  };
-
-  const handleLinkMouseLeave = () => {
-    setShowCard(false); // Hide card when mouse leaves the link
+  const handleSearchSubmit = event => {
+    event.preventDefault();
   };
 
   return isLoaded ? (
     <div>
+      <div className='flex justify-center items-center p-5 mb-4'>
+        <div className='rounded-lg bg-gray-200 p-4'>
+          <div className='flex'>
+            <div className='flex w-16 items-center justify-center rounded-tl-lg rounded-bl-lg border-r border-gray-200 bg-white p-5'>
+              <svg
+                viewBox='0 0 20 20'
+                aria-hidden='true'
+                className='pointer-events-none absolute w-5 fill-gray-500 transition'
+              >
+                <path d='M16.72 17.78a.75.75 0 1 0 1.06-1.06l-1.06 1.06ZM9 14.5A5.5 5.5 0 0 1 3.5 9H2a7 7 0 0 0 7 7v-1.5ZM3.5 9A5.5 5.5 0 0 1 9 3.5V2a7 7 0 0 0-7 7h1.5ZM9 3.5A5.5 5.5 0 0 1 14.5 9H16a7 7 0 0 0-7-7v1.5Zm3.89 10.45 3.83 3.83 1.06-1.06-3.83-3.83-1.06 1.06ZM14.5 9a5.48 5.48 0 0 1-1.61 3.89l1.06 1.06A6.98 6.98 0 0 0 16 9h-1.5Zm-1.61 3.89A5.48 5.48 0 0 1 9 14.5V16a6.98 6.98 0 0 0 4.95-2.05l-1.06-1.06Z'></path>
+              </svg>
+            </div>
+            <input
+              type='text'
+              className='w-full max-w-[160px] bg-white pl-2 text-base font-semibold outline-0'
+              placeholder='Search Location...'
+              value={searchAddress}
+              onChange={handleSearchChange}
+            />
+            <input
+              type='button'
+              value='Search'
+              className='bg-blue-500 p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 transition-colors'
+              onClick={handleSearchSubmit}
+            />
+          </div>
+        </div>
+      </div>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={14}
+        zoom={12}
         onLoad={onLoad}
         onUnmount={onUnmount}
         options={{
@@ -138,50 +98,8 @@ function MapsComponent() {
         }}
       >
         {points.map((point, i) => (
-          <Marker
-            key={i}
-            position={{ lat: point.lat, lng: point.lng }}
-            onClick={() => handleMarkerClick(point)}
-            icon={{
-              url: markerIcon1,
-              scaledSize: new window.google.maps.Size(40, 40), // Adjust the size as needed
-            }}
-          />
+          <Marker key={i} position={point} />
         ))}
-        {selectedPoint && (
-          <InfoWindow
-            position={{ lat: selectedPoint.lat, lng: selectedPoint.lng }}
-            onCloseClick={handleInfoWindowClose}
-          >
-            {selectedPoint.link ? (
-              <a
-                href={selectedPoint.link}
-                target='_blank'
-                rel='noopener noreferrer'
-                onMouseEnter={handleLinkMouseEnter}
-                onMouseLeave={handleLinkMouseLeave}
-              >
-                Website
-              </a>
-            ) : (
-              <div>No link available</div>
-            )}
-          </InfoWindow>
-        )}
-        {showCard && selectedPoint && selectedPoint.cardContent && (
-          <div
-            style={{
-              position: 'absolute',
-              top: 50,
-              left: 0,
-              backgroundColor: 'white',
-              padding: 10,
-              zIndex: 999,
-            }}
-          >
-            {selectedPoint.cardContent}
-          </div>
-        )}
       </GoogleMap>
     </div>
   ) : (
