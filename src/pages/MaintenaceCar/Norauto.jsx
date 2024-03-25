@@ -8,7 +8,7 @@ function Norauto() {
 
   const getServices = async () => {
     try {
-      const response = await getService('euromaster');
+      const response = await getService('norauto');
       console.log(response);
       console.log(response.data);
       setServices(response.data);

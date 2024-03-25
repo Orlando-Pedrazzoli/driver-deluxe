@@ -8,7 +8,7 @@ function Mforce() {
 
   const getServices = async () => {
     try {
-      const response = await getService('euromaster');
+      const response = await getService('mforce');
       console.log(response);
       console.log(response.data);
       setServices(response.data);
@@ -42,7 +42,7 @@ function Mforce() {
                 ></path>
               </svg>
               <div className='space-y-2'>
-                <p className='text-lg font-medium leadi'>Euromaster:</p>
+                <p className='text-lg font-medium leadi'>MForce:</p>
                 <p className='leadi'>
                   MForce boasts a network of over 80 specialized workshops in
                   tires and mechanics, strategically located across the country.
