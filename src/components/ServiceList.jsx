@@ -27,7 +27,7 @@ function ServiceList() {
 
                   <div className='relative bg-white pt-3'>
                     <h3 className='text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4'>
-                      Vibration
+                      VIBRATION
                     </h3>
 
                     <p className='mt-2'>
@@ -49,7 +49,7 @@ function ServiceList() {
 
                   <div className='relative bg-white pt-3'>
                     <h3 className='text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4'>
-                      Reflexology
+                      REFLEXOLOGY
                     </h3>
 
                     <p className='mt-2'>
@@ -71,7 +71,7 @@ function ServiceList() {
 
                   <div className='relative bg-white pt-3'>
                     <h3 className='text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4'>
-                      Chair Massage
+                      CHAIR MASSAGE
                     </h3>
 
                     <p className='mt-2'>
@@ -93,7 +93,7 @@ function ServiceList() {
 
                   <div className='relative bg-white pt-3'>
                     <h3 className='text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4'>
-                      Shiatsu
+                      SHIATSU
                     </h3>
 
                     <p className='mt-2'>
