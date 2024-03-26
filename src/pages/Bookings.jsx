@@ -40,11 +40,15 @@ function Bookings({ MapsComponent }) {
   }, []);
   return (
     <div>
-      <h2 className='text-xl font-semibold p-4'>Your Bookings</h2>
+      <div style={{ margin: 'auto' }}>
+        <h2 className='text-xl font-semibold text-center p-10'>
+          Your Bookings:
+        </h2>
+      </div>
       {bookings &&
         bookings.map(booking => (
           <div key={booking._id}>
-            <div className='flex flex-col max-w-3xl p-0 space-y-4 sm:p-2 dark:bg-gray-900 dark:text-gray-100'>
+            <div className='flex flex-col max-w-5xl p-0 space-y-4 sm:p-2 dark:bg-gray-900 dark:text-gray-100 m-auto'>
               <ul className='flex flex-col divide-y dark:divide-gray-700'>
                 <li className='flex flex-col py-0 sm:flex-row sm:justify-between'>
                   <div className='flex w-full space-x-2 sm:space-x-4'>
@@ -118,11 +122,14 @@ function Bookings({ MapsComponent }) {
                     </div>
                   </div>
                 </li>
+                <hr style={{ padding: 10 }}></hr>
               </ul>
             </div>
           </div>
         ))}
-      <MapsComponent />
+      <div style={{ 'padding-bottom': 40, 'padding-top': 10 }}>
+        <MapsComponent />
+      </div>
     </div>
   );
 }
