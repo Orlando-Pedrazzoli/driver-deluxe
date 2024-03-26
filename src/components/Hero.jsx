@@ -1,7 +1,7 @@
 import { Stars } from '@react-three/drei';
 import { Link } from 'react-router-dom';
 import { Canvas } from '@react-three/fiber';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import {
   useMotionTemplate,
@@ -41,7 +41,7 @@ function Hero() {
         </h1>
         <p className='my-10 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed'>
           Ready to hit the road with confidence and savings? Sign up now and
-          let's embark on this exciting journey together!
+          embark on this exciting journey!
         </p>
         <Link to='/services'>
           <motion.button

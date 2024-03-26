@@ -89,12 +89,6 @@ To access discounted services, follow these steps:
 
 - **Forms**: Fill out forms to provide necessary information for registration, appointment booking, etc.
 
-### 5. Troubleshooting
 
-This README should now be comprehensive and ready for users to follow along with installation, usage, and troubleshooting instructions. Let me know if you need further assistance!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ```

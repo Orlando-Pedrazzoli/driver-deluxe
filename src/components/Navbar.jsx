@@ -71,7 +71,7 @@ function Navbar() {
             className='navbar-logo font-semibold'
             onClick={closeMobileMenu}
           >
-            <p>DRIVER CARE</p>
+            <p>DRIVER DELUXE</p>
           </Link>
 
           <div className='menu-icon' onClick={handleClick}>
@@ -79,12 +79,6 @@ function Navbar() {
           </div>
 
           <ul className={click ? 'nav-menu active ' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-
             <li
               className='nav-item'
               onMouseEnter={onMouseEnter}
@@ -122,7 +116,16 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link to='/news' className='nav-links' onClick={closeMobileMenu}>
-                TVDE News
+                News
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/bookings'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Bookings
               </Link>
             </li>
 
