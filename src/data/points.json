@@ -1,0 +1,267 @@
+[
+  {
+    "lat": 38.714906,
+    "lng": -9.131064,
+    "link": "https://www.terraheal.com/",
+    "serviceName": "Terra Heal Massage",
+    "cardContent": "<img src='img1' alt='' style={{ width: '280px', height: '170px' }} />",
+    "color": "red"
+  },
+  {
+    "lat": 38.712597,
+    "lng": -9.135928,
+    "link": "https://www.ecomassage.com/?lang=pt-pt",
+    "serviceName": "Eco Massage",
+    "cardContent": "<img src='img2' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "red"
+  },
+  {
+    "lat": 38.715314,
+    "lng": -9.140018,
+    "link": "https://www.myothaimassage.pt/",
+    "serviceName": "Thai Massage",
+    "cardContent": "<img src='img3' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "red"
+  },
+  {
+    "lat": 38.711962,
+    "lng": -9.138024,
+    "link": "https://massagem-sensual.com/pt/",
+    "serviceName": "Sensual Massage",
+    "cardContent": "<img src='img4' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "red"
+  },
+  {
+    "lat": 38.731145,
+    "lng": -9.160203,
+    "link": "https://thebotanicalmassage.com/",
+    "serviceName": "Botanical Massage",
+    "cardContent": "<img src='img5' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "red"
+  },
+  {
+    "lat": 38.712922,
+    "lng": -9.141686,
+    "link": "https://www.corinthia.com/pt-pt/lisbon/the-spa-by-corinthia-lisbon/",
+    "serviceName": "Corinthia Massage",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "red"
+  },
+
+  {
+    "lat": 38.760519,
+    "lng": -9.298184,
+    "link": "https://maps.app.goo.gl/7eyEVkx5BwsFUEAq7/",
+    "serviceName": "Norauto Sintra",
+    "address": "Rua Da, R. República da Coreia, 2725-397 Mem Martins",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "yellow"
+  },
+  {
+    "lat": 38.6931042,
+    "lng": -9.3049594,
+    "link": "https://maps.app.goo.gl/rkupvpnKtuqm8kez8/",
+    "serviceName": "Norauto Carcavelos",
+    "address": "Estrada Alagoa 96 Bairro De São João Da, 2775-711 Carcavelos",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "yellow"
+  },
+  {
+    "lat": 38.7569,
+    "lng": -9.2308,
+    "link": "https://maps.app.goo.gl/znBe9F59B31RJBXH8/",
+    "serviceName": "Norauto Amadora",
+    "address": "Parcela A, Av. Lima de Freitas, 2650-501 Amadora",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "yellow"
+  },
+  {
+    "lat": 38.7846,
+    "lng": -9.1942,
+    "link": "https://maps.app.goo.gl/kSLZsC6wErxmiP2AA/",
+    "serviceName": "Norauto Odivelas",
+    "address": "Strada Shopping, Estrada Da Paia - Patameiras, 2675-626 Odivelas",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "yellow"
+  },
+  {
+    "lat": 38.790772,
+    "lng": -9.09469,
+    "link": "https://maps.app.goo.gl/gH2BcGPekjC2WghE8/",
+    "serviceName": "Norauto Sacavém",
+    "address": "R. Cidade de Goa 22 24, 2685-137 Sacavém",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "yellow"
+  },
+  {
+    "lat": 38.710951,
+    "lng": -9.203021,
+    "link": "https://maps.app.goo.gl/qEhQnfwYb1mTKRJJ6/",
+    "serviceName": "Norauto Alfragide",
+    "address": "Av. dos Cavaleiros 49 E 49A, 2794-057 Carnaxide",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "yellow"
+  },
+  {
+    "lat": 38.756768,
+    "lng": -9.157894,
+    "link": "https://maps.app.goo.gl/ApScngqFikKbANYX8/",
+    "serviceName": "MForce Campo Grande",
+    "address": "Av. dos Cavaleiros 49 E 49A, 2794-057 Carnaxide",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "green"
+  },
+  {
+    "lat": 38.750617,
+    "lng": -9.194235,
+    "link": "https://maps.app.goo.gl/reDRijuAWLDYUkcU8/",
+    "serviceName": "MForce Fonte Nova",
+    "address": "Posto Repsol Benfica/Fonte Nova, Av. General Norton de Matos, 1500-313 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "green"
+  },
+  {
+    "lat": 38.706932,
+    "lng": -9.161637,
+    "link": "https://maps.app.goo.gl/LN13P4MnWs5JtDeo7/",
+    "serviceName": "MForce Av. Infante Santo",
+    "address": "Av. Infante Santo 42A, 1350-179 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "green"
+  },
+  {
+    "lat": 38.719363,
+    "lng": -9.154931,
+    "link": "https://maps.app.goo.gl/LN13P4MnWs5JtDeo7/",
+    "serviceName": "MForce D. João V",
+    "address": "Rua Dom João V 25C, 1250-089 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "green"
+  },
+  {
+    "lat": 38.728342,
+    "lng": -9.153293,
+    "link": "https://maps.app.goo.gl/LN13P4MnWs5JtDeo7/",
+    "serviceName": "MForce Ant. Aug. Aguiar",
+    "address": "Av. António Augusto de Aguiar 19 A/B, 1050-012 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "green"
+  },
+  {
+    "lat": 38.73547,
+    "lng": -9.145446,
+    "link": "https://maps.app.goo.gl/LN13P4MnWs5JtDeo7/",
+    "serviceName": "MForce Saldanha",
+    "address": "R. Pedro Nunes nº45A, 1050-053 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "green"
+  },
+  {
+    "lat": 38.745751,
+    "lng": -9.14568,
+    "link": "https://maps.app.goo.gl/LFtXCnNkv6rW8QFE6/",
+    "serviceName": "Euromaster Auto Pereira",
+    "address": "R. Prof. Manuel Valadares 15, 1750-232 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "purple"
+  },
+  {
+    "lat": 38.741436,
+    "lng": -9.15477,
+    "link": "https://maps.app.goo.gl/jQVoZ9ahroB7vCSR6/",
+    "serviceName": "Euromaster Auto Pereira",
+    "address": "Av. Elias Garcia 83, 1050-097 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "purple"
+  },
+  {
+    "lat": 38.742511,
+    "lng": -9.13175,
+    "link": "https://maps.app.goo.gl/8bbnmgV8riLzfw9y9/",
+    "serviceName": "Euromaster João Mateus Lopes",
+    "address": "Avenida Almirante Gago Coutinho, SN Estação de Serviço BP Areeiro, 1000-016 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "purple"
+  },
+  {
+    "lat": 38.758781,
+    "lng": -9.158732,
+    "link": "https://maps.app.goo.gl/8bbnmgV8riLzfw9y9/",
+    "serviceName": "Euromaster Portugal - Sede",
+    "address": "Campo Grande 378 Unit 4A, 1700-096 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "purple"
+  },
+  {
+    "lat": 38.757126,
+    "lng": -9.256979,
+    "link": "https://maps.app.goo.gl/QEvGWXSt6fV3MhL39/",
+    "serviceName": "Euromaster Rio Paiva",
+    "address": "R. Sebastião e Silva 13, Queluz",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "purple"
+  },
+  {
+    "lat": 38.724914,
+    "lng": -9.136859,
+    "link": "https://maps.app.goo.gl/bPzkhpUv1bw8umoK7/",
+    "serviceName": "Euromaster Justino Gomes Bessa Estefânia",
+    "address": "R. Alexandre Braga 14 A-B, 1150-004 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "purple"
+  },
+  {
+    "lat": 38.732221,
+    "lng": -9.160845,
+    "link": "https://maps.app.goo.gl/qAPkhBs2iNYh7hZy7/",
+    "serviceName": "Bosch Auto",
+    "address": "Rua Marquês de Fronteira 123 B C, 1070-293 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "orange"
+  },
+  {
+    "lat": 38.742605,
+    "lng": -9.131815,
+    "link": "https://maps.app.goo.gl/RPQnUEDDxbvFmHPH8/",
+    "serviceName": "Bosch Car Service João Mateus Lopes",
+    "address": "Av. Alm. Gago Coutinho, 1000-016 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "orange"
+  },
+  {
+    "lat": 38.73693,
+    "lng": -9.156144,
+    "link": "https://maps.app.goo.gl/6ocvjMGmfkvDBcaE9/",
+    "serviceName": "Bosch Car Service Auto Columbano",
+    "address": "R. Dr. António Granjo 16 B C e D, 1070-090 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "orange"
+  },
+  {
+    "lat": 38.770046,
+    "lng": -9.137805,
+    "link": "https://maps.app.goo.gl/S3kcgUMSnj7kbJ6p6/",
+    "serviceName": "Bosch Car Service - LD AUTO",
+    "address": "Av. Pádua 14, 1800-297 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "orange"
+  },
+  {
+    "lat": 38.736955,
+    "lng": -9.15263,
+    "link": "https://maps.app.goo.gl/gQAgp5j2adR6ekZf8/",
+    "serviceName": "Bosch Car Service Auto Itália",
+    "address": "Av. Luís Bívar 36 B, 1050-145 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "orange"
+  },
+  {
+    "lat": 38.736561,
+    "lng": -9.153042,
+    "link": "https://maps.app.goo.gl/XYPHWo2UL6ay4MKk9/",
+    "serviceName": "Bosch Car Service",
+    "address": "Av. Visc. de Valmor 36 BC, 1050-240 Lisboa",
+    "cardContent": "<img src='img6' alt='' style={{ width: '300px', height: '170px' }} />",
+    "color": "orange"
+  }
+]

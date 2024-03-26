@@ -58,7 +58,7 @@ function App() {
           path='/tourpage'
           element={
             <IsPrivate>
-              <TourPage />
+              <TourPage MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -74,7 +74,7 @@ function App() {
           path='/services/oneItem/:itemId'
           element={
             <IsPrivate>
-              <SingleService />
+              <SingleService MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -114,7 +114,7 @@ function App() {
           path='/reflexology'
           element={
             <IsPrivate>
-              <Reflexology />
+              <Reflexology MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -122,7 +122,7 @@ function App() {
           path='/chairmassage'
           element={
             <IsPrivate>
-              <ChairMassage />
+              <ChairMassage MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -130,7 +130,7 @@ function App() {
           path='/shiatsu'
           element={
             <IsPrivate>
-              <Shiatsu />
+              <Shiatsu MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -138,7 +138,7 @@ function App() {
           path='/boschcarservice'
           element={
             <IsPrivate>
-              <Boschcar />
+              <Boschcar MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -146,7 +146,7 @@ function App() {
           path='/norauto'
           element={
             <IsPrivate>
-              <Norauto />
+              <Norauto MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -154,7 +154,7 @@ function App() {
           path='/euromaster'
           element={
             <IsPrivate>
-              <Euromaster />
+              <Euromaster MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -162,7 +162,7 @@ function App() {
           path='/mforce'
           element={
             <IsPrivate>
-              <Mforce />
+              <Mforce MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />

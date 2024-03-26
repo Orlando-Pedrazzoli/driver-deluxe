@@ -1,12 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
-import img1 from '../assets/terraheal.png';
-import img2 from '../assets/ecomassage.png';
-import img3 from '../assets/thaimassage.png';
-import img4 from '../assets/sensual.png';
-import img5 from '../assets/botanica.png';
-import img6 from '../assets/corinthia.png';
 import {
   GoogleMap,
   useJsApiLoader,
@@ -14,10 +6,11 @@ import {
   InfoWindow,
 } from '@react-google-maps/api';
 import { getGoogleMaps } from '../api/googlemaps.api';
+import pointsData from '../data/points.json';
 
 const containerStyle = {
   width: '70%',
-  height: '50vh',
+  height: '60vh',
   margin: 'auto',
 };
 
@@ -25,57 +18,6 @@ const center = {
   lat: 38.7223,
   lng: -9.1393,
 };
-
-const points = [
-  {
-    lat: 38.714906,
-    lng: -9.131064,
-    link: 'https://www.terraheal.com/',
-    cardContent: (
-      <img src={img1} alt='' style={{ width: '280px', height: '170px' }} />
-    ),
-  },
-  {
-    lat: 38.712597,
-    lng: -9.135928,
-    link: 'https://www.ecomassage.com/?lang=pt-pt',
-    cardContent: (
-      <img src={img2} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-  },
-  {
-    lat: 38.715314,
-    lng: -9.140018,
-    link: 'https://www.myothaimassage.pt/',
-    cardContent: (
-      <img src={img3} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-  },
-  {
-    lat: 38.711962,
-    lng: -9.138024,
-    link: 'https://massagem-sensual.com/pt/',
-    cardContent: (
-      <img src={img4} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-  },
-  {
-    lat: 38.731145,
-    lng: -9.160203,
-    link: 'https://thebotanicalmassage.com/',
-    cardContent: (
-      <img src={img5} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-  },
-  {
-    lat: 38.712922,
-    lng: -9.141686,
-    link: 'https://www.corinthia.com/pt-pt/lisbon/the-spa-by-corinthia-lisbon/',
-    cardContent: (
-      <img src={img6} alt='' style={{ width: '300px', height: '170px' }} />
-    ),
-  },
-];
 
 function MapsComponent() {
   const [selectedPoint, setSelectedPoint] = useState(null);
@@ -106,11 +48,12 @@ function MapsComponent() {
     setShowCard(false);
   };
 
-  const handleLinkMouseEnter = () => {
+  const handleMarkerMouseEnter = point => {
+    setSelectedPoint(point);
     setShowCard(true);
   };
 
-  const handleLinkMouseLeave = () => {
+  const handleMarkerMouseLeave = () => {
     setShowCard(false);
   };
 
@@ -119,20 +62,22 @@ function MapsComponent() {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={14}
+        zoom={12}
         options={{
           streetViewControl: false,
           mapTypeControl: false,
         }}
       >
-        {points.map((point, i) => (
+        {pointsData.map((point, i) => (
           <Marker
             key={i}
             position={{ lat: point.lat, lng: point.lng }}
             onClick={() => handleMarkerClick(point)}
+            onMouseEnter={() => handleMarkerMouseEnter(point)}
+            onMouseLeave={handleMarkerMouseLeave}
             icon={{
-              path: <FontAwesomeIcon icon={faMapMarker} />,
-              scale: 0.5,
+              url: `http://maps.google.com/mapfiles/ms/icons/${point.color}-dot.png`,
+              scaledSize: new window.google.maps.Size(34, 34),
             }}
           />
         ))}
@@ -141,34 +86,49 @@ function MapsComponent() {
             position={{ lat: selectedPoint.lat, lng: selectedPoint.lng }}
             onCloseClick={handleInfoWindowClose}
           >
-            {selectedPoint.link ? (
+            <div>
+              <p style={{ fontWeight: 'bold' }}>{selectedPoint.serviceName}</p>
+              <p>
+                Link:
+                <a
+                  href={selectedPoint.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {selectedPoint.link}
+                </a>
+              </p>
+            </div>
+          </InfoWindow>
+        )}
+        {showCard && selectedPoint && selectedPoint.image && (
+          <InfoWindow
+            position={{ lat: selectedPoint.lat, lng: selectedPoint.lng }}
+            onCloseClick={handleInfoWindowClose}
+          >
+            <div
+              style={{
+                position: 'absolute',
+                top: 50,
+                left: 0,
+                backgroundColor: 'white',
+                padding: 10,
+                zIndex: 999,
+              }}
+            >
               <a
                 href={selectedPoint.link}
                 target='_blank'
                 rel='noopener noreferrer'
-                onMouseEnter={handleLinkMouseEnter}
-                onMouseLeave={handleLinkMouseLeave}
               >
-                Website
+                <img
+                  src={require(`../assets/${selectedPoint.image}`).default}
+                  alt=''
+                  style={{ width: '300px', height: '170px' }}
+                />
               </a>
-            ) : (
-              <div>No link available</div>
-            )}
+            </div>
           </InfoWindow>
-        )}
-        {showCard && selectedPoint && selectedPoint.cardContent && (
-          <div
-            style={{
-              position: 'absolute',
-              top: 50,
-              left: 0,
-              backgroundColor: 'white',
-              padding: 10,
-              zIndex: 999,
-            }}
-          >
-            {selectedPoint.cardContent}
-          </div>
         )}
       </GoogleMap>
     </div>
