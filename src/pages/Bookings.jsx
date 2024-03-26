@@ -63,7 +63,7 @@ function Bookings({ MapsComponent }) {
                             Address: {booking.massage.company.address}
                           </p>
                           <p className='text-sm dark:text-gray-400'>
-                            Date: {booking.date}
+                            Date: {booking.date.slice(0, 10)}
                           </p>
                           <p className='text-sm dark:text-gray-400'>
                             Time: {booking.time}
@@ -120,9 +120,9 @@ function Bookings({ MapsComponent }) {
                 </li>
               </ul>
             </div>
-            <MapsComponent />
           </div>
         ))}
+      <MapsComponent />
     </div>
   );
 }
