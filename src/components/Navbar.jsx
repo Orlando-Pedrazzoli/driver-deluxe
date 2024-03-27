@@ -8,10 +8,7 @@ import './CSS/Navbar.css';
 function Navbar() {
   const { isLoggedIn, logoutUser } = useContext(AuthContext);
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const [activeLink, setActiveLink] = useState('');
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -29,12 +26,20 @@ function Navbar() {
     }
   };
 
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
+  const handleLinkClick = link => {
+    setActiveLink(link);
+    closeMobileMenu();
+  };
+
   return (
     <>
       {!isLoggedIn ? (
         <nav className='navbar'>
           <div className='navbar-logo font-semibold'>
-            <Link to='/'>
+            <Link to='/' onClick={() => setActiveLink('')}>
               <p>DRIVER DELUXE</p>
             </Link>
           </div>
@@ -42,8 +47,10 @@ function Navbar() {
             <li className='nav-item-auth'>
               <Link
                 to='/signup'
-                onClick={closeMobileMenu}
-                className='text-white bg-green-500 hover:bg-green-600 transition-all duration-200 ease-out rounded px-4 py-2'
+                onClick={() => handleLinkClick('/signup')}
+                className={`text-white bg-green-500 hover:bg-green-600 transition-all duration-200 ease-out rounded px-4 py-2 ${
+                  activeLink === '/signup' ? 'active' : ''
+                }`}
               >
                 Sign Up
               </Link>
@@ -51,8 +58,10 @@ function Navbar() {
             <li className='nav-item-auth'>
               <Link
                 to='/login'
-                onClick={closeMobileMenu}
-                className='text-white bg-blue-700 hover:bg-blue-800 transition-all duration-200 ease-out rounded px-4 py-2'
+                onClick={() => handleLinkClick('/login')}
+                className={`text-white bg-blue-700 hover:bg-blue-800 transition-all duration-200 ease-out rounded px-4 py-2 ${
+                  activeLink === '/login' ? 'active' : ''
+                }`}
               >
                 Login
               </Link>
@@ -64,7 +73,7 @@ function Navbar() {
           <Link
             to='/'
             className='navbar-logo font-semibold'
-            onClick={closeMobileMenu}
+            onClick={() => setActiveLink('')}
           >
             <p>DRIVER DELUXE</p>
           </Link>
@@ -74,15 +83,13 @@ function Navbar() {
           </div>
 
           <ul className={click ? 'nav-menu active ' : 'nav-menu'}>
-            <li
-              className='nav-item'
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-            >
+            <li className='nav-item'>
               <Link
                 to='/allservices'
-                className='nav-links'
-                onClick={closeMobileMenu}
+                className={`nav-links ${
+                  activeLink === '/allservices' ? 'active' : ''
+                }`}
+                onClick={() => handleLinkClick('/allservices')}
               >
                 All <FontAwesomeIcon />
               </Link>
@@ -94,8 +101,10 @@ function Navbar() {
             >
               <Link
                 to='/massages'
-                className='nav-links'
-                onClick={closeMobileMenu}
+                className={`nav-links ${
+                  activeLink === '/massages' ? 'active' : ''
+                }`}
+                onClick={() => handleLinkClick('/massages')}
               >
                 Massages <FontAwesomeIcon />
               </Link>
@@ -107,8 +116,10 @@ function Navbar() {
             >
               <Link
                 to='/tourpage'
-                className='nav-links'
-                onClick={closeMobileMenu}
+                className={`nav-links ${
+                  activeLink === '/tourpage' ? 'active' : ''
+                }`}
+                onClick={() => handleLinkClick('/tourpage')}
               >
                 Tours <FontAwesomeIcon />
               </Link>
@@ -116,28 +127,38 @@ function Navbar() {
             <li className='nav-item'>
               <Link
                 to='/carservice'
-                className='nav-links'
-                onClick={closeMobileMenu}
+                className={`nav-links ${
+                  activeLink === '/carservice' ? 'active' : ''
+                }`}
+                onClick={() => handleLinkClick('/carservice')}
               >
                 Car Service
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/news' className='nav-links' onClick={closeMobileMenu}>
+              <Link
+                to='/news'
+                className={`nav-links ${
+                  activeLink === '/news' ? 'active' : ''
+                }`}
+                onClick={() => handleLinkClick('/news')}
+              >
                 News
               </Link>
             </li>
             <li className='nav-item'>
               <Link
                 to='/bookings'
-                className='nav-links'
-                onClick={closeMobileMenu}
+                className={`nav-links ${
+                  activeLink === '/bookings' ? 'active' : ''
+                }`}
+                onClick={() => handleLinkClick('/bookings')}
               >
                 Bookings
               </Link>
             </li>
 
-            <li className='nav-item'>
+            <li className='nav-item flex justify-center md:justify-end'>
               <button
                 onClick={logoutUser}
                 className='rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-primary ml-4'
