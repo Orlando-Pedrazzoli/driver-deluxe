@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './CSS/Navbar.css';
+import steeringIMG from '../assets/SteeringWheel-inverted.png';
 
 function Navbar() {
   const { isLoggedIn, logoutUser } = useContext(AuthContext);
@@ -39,9 +40,21 @@ function Navbar() {
       {!isLoggedIn ? (
         <nav className='navbar'>
           <div className='navbar-logo font-semibold'>
-            <Link to='/' onClick={() => setActiveLink('')}>
-              <p>DRIVER DELUXE</p>
-            </Link>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <Link
+                to='/'
+                className='navbar-logo font-semibold'
+                onClick={() => setActiveLink('')}
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
+                <img
+                  src={steeringIMG}
+                  style={{ width: 80, marginRight: 5 }}
+                  alt='logo'
+                />
+                <p style={{ margin: 0 }}>DRIVER DELUXE</p>
+              </Link>
+            </div>
           </div>
           <ul className='nav-menu'>
             <li className='nav-item-auth'>
@@ -70,13 +83,21 @@ function Navbar() {
         </nav>
       ) : (
         <nav className='navbar'>
-          <Link
-            to='/'
-            className='navbar-logo font-semibold'
-            onClick={() => setActiveLink('')}
-          >
-            <p>DRIVER DELUXE</p>
-          </Link>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <Link
+              to='/'
+              className='navbar-logo font-semibold'
+              onClick={() => setActiveLink('')}
+              style={{ display: 'flex', alignItems: 'center' }}
+            >
+              <img
+                src={steeringIMG}
+                style={{ width: 80, marginRight: 5 }}
+                alt='logo'
+              />
+              <p style={{ margin: 0 }}>DRIVER DELUXE</p>
+            </Link>
+          </div>
 
           <div className='menu-icon' onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faTimes : faBars} />

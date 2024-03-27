@@ -42,7 +42,7 @@ function Bookings({ MapsComponent, Breadcrumb }) {
     <div>
       <Breadcrumb />
       <div style={{ margin: 'auto' }}>
-        <h2 className='text-xl font-semibold text-center p-10'>
+        <h2 className='text-xl font-semibold text-center pt-2 pb-10'>
           Your Bookings:
         </h2>
         <hr style={{ paddingBottom: 20 }} />
