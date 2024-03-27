@@ -13,6 +13,7 @@ function ProductPage({ MapsComponent }) {
   const [service, setService] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const formattedServiceType = service ? formatServiceType(service.type) : '';
 
@@ -27,8 +28,7 @@ function ProductPage({ MapsComponent }) {
   const getSingleService = async () => {
     try {
       const response = await getMassage(itemId);
-      console.log(itemId);
-      console.log(response.data);
+      setLoading(false);
       setService(response.data);
     } catch (error) {
       console.log(error);
@@ -64,7 +64,12 @@ function ProductPage({ MapsComponent }) {
     getSingleService();
   }, []);
 
-  return (
+  return loading ? (
+    <div className='flex flex-col justify-center items-center'>
+      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <p>Loading...</p>
+    </div>
+  ) : (
     <>
       <div>
         {service && (
@@ -132,6 +137,10 @@ function ProductPage({ MapsComponent }) {
             </section>
           </>
         )}
+      </div>
+      <hr style={{ paddingBottom: 50 }}></hr>
+      <div style={{ paddingBottom: 50 }}>
+        <MapsComponent></MapsComponent>
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getService } from '@/api/services.api';
-import mforceIMG from '../../assets/mforce.jpg';
+import mforceIMG from '../../assets/mforce_boa.jpg';
 import { Link } from 'react-router-dom';
 
 function Mforce() {

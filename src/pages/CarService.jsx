@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import boschcarImg from '../assets/boschcar.jpg';
 import euromasterImg from '../assets/euromaster.jpg';
-import mforceImg from '../assets/mforce.jpg';
+import mforceImg from '../assets/mforce_boa.jpg';
 import norautoImg from '../assets/norauto.jpg';
 
 function CarService() {
