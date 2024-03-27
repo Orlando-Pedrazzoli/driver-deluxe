@@ -100,7 +100,7 @@ function ProductPage({ MapsComponent }) {
                     <p>{service.company.address}</p>
                     <p>Tel: {service.company.contact}</p>
                     <p className='mt-4 text-gray-600'>
-                      {service.company.website}
+                      <a>{service.company.website}</a>
                     </p>
                     <p className='mt-4 text-gray-600'>{service.description}</p>
 
