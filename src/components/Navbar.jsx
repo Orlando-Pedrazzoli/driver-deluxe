@@ -35,7 +35,7 @@ function Navbar() {
         <nav className='navbar'>
           <div className='navbar-logo font-semibold'>
             <Link to='/'>
-              <p>DRIVER CARE</p>
+              <p>DRIVER DELUXE</p>
             </Link>
           </div>
           <ul className='nav-menu'>

@@ -111,7 +111,7 @@ function AllServices() {
               worry-free. Trust us to maintain your vehicle's performance and
               safety, so you can focus on the road ahead with confidence.
             </p>
-            <Link to='/maintenance'>
+            <Link to='/carservice'>
               <button class='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
                 Explore
                 <svg
