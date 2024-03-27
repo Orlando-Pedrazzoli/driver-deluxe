@@ -5,6 +5,7 @@ import shiatsuImg from '../../assets/shiatsu.png';
 
 function Shiatsu() {
   const [services, setServices] = useState();
+  const [loading, setLoading] = useState(true);
 
   const getServices = async () => {
     try {
@@ -12,6 +13,7 @@ function Shiatsu() {
       console.log(response);
       console.log(response.data);
       setServices(response.data);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -21,7 +23,12 @@ function Shiatsu() {
     getServices();
   }, []);
 
-  return (
+  return loading ? (
+    <div className='flex flex-col justify-center items-center'>
+      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <p>Loading...</p>
+    </div>
+  ) : (
     <>
       <section className='bg-white text-gray-100 mt-12'>
         <div className='container flex flex-col-reverse mx-auto lg:flex-row'>

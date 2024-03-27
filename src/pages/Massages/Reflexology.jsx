@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getService } from '@/api/services.api';
 import reflexologyImg from '../../assets/reflexology.png';
@@ -6,12 +6,14 @@ import MapsComponent from '../../components/MapsComponent';
 
 function Reflexology() {
   const [services, setServices] = useState();
-  const [showMap, setShowMap] = useState(false); // State to control map visibility
+  const [showMap, setShowMap] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const getServices = async () => {
     try {
       const response = await getService('reflexology');
       setServices(response.data);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -21,7 +23,12 @@ function Reflexology() {
     getServices();
   }, []);
 
-  return (
+  return loading ? (
+    <div className='flex flex-col justify-center items-center'>
+      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <p>Loading...</p>
+    </div>
+  ) : (
     <>
       <section className='bg-white text-gray-100 mt-12'>
         <div className='container flex flex-col-reverse mx-auto lg:flex-row'>

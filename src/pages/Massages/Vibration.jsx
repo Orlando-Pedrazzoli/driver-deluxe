@@ -6,6 +6,7 @@ import redicon from '../../assets/redicon.png';
 
 function Vibration({ MapsComponent }) {
   const [services, setServices] = useState();
+  const [loading, setLoading] = useState(true);
 
   const getServices = async () => {
     try {
@@ -13,6 +14,7 @@ function Vibration({ MapsComponent }) {
       console.log(response);
       console.log(response.data);
       setServices(response.data);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -22,8 +24,13 @@ function Vibration({ MapsComponent }) {
     getServices();
   }, []);
 
-  return (
-    <>
+  return loading ? (
+    <div className='flex flex-col justify-center items-center'>
+      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <p>Loading...</p>
+    </div>
+  ) : (
+    <div>
       <section className='bg-white text-gray-100 mt-12'>
         <div className='container flex flex-col-reverse mx-auto lg:flex-row'>
           <div className='flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 bg-gray-200 text-gray-900'>
@@ -134,8 +141,8 @@ function Vibration({ MapsComponent }) {
             ))}
         </div>
       </div>
-      <hr style={{ 'padding-bottom': 50 }}></hr>
-      <div style={{ 'padding-bottom': 50 }}>
+      <hr style={{ paddingBottom: 50 }}></hr>
+      <div style={{ paddingBottom: 50 }}>
         <h1 className='text-center font-semibold text-2xl mb-6'>
           Check all Massage Houses on the map with red icon
           <img
@@ -146,7 +153,7 @@ function Vibration({ MapsComponent }) {
         </h1>
         <MapsComponent />
       </div>
-    </>
+    </div>
   );
 }
 
