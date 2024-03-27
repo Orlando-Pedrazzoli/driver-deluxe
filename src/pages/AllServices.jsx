@@ -1,4 +1,3 @@
-import React from 'react';
 import massageimg from '../assets/massage.jpg';
 import tourimg from '../assets/tour.jpg';
 import maintenaceimg from '../assets/maintenance.jpg';
@@ -21,7 +20,7 @@ function AllServices() {
             </h3>
             <p className='my-6 dark:text-gray-600'>
               Unwind and rejuvenate with our exclusive massage services tailored
-              for drivers. Whether you're seeking relief from long hours on the
+              for drivers. Whether you´re seeking relief from long hours on the
               road or simply want to pamper yourself, our skilled therapists are
               here to provide relaxation at your convenience. Enjoy a variety of
               massage techniques designed to ease tension, reduce stress, and
@@ -30,20 +29,20 @@ function AllServices() {
               journey.
             </p>
             <Link to='/massages'>
-              <button class='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
+              <button className='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
                 Explore
                 <svg
-                  class='w-5 h-5'
+                  className='w-5 h-5'
                   stroke='currentColor'
-                  stroke-width='1.5'
+                  strokeWidth='1.5'
                   viewBox='0 0 24 24'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'
                 >
                   <path
                     d='M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5'
-                    stroke-linejoin='round'
-                    stroke-linecap='round'
+                    strokeLinejoin='round'
+                    strokeLinecap='round'
                   ></path>
                 </svg>
               </button>
@@ -64,28 +63,28 @@ function AllServices() {
               Embark on unforgettable adventures with our tour section, designed
               to help drivers explore the beauty of Portugal like never before.
               From scenic drives to cultural excursions, we offer a variety of
-              tours that showcase the country's rich history, stunning
-              landscapes, and vibrant culture. Whether you're seeking
+              tours that showcase the country`s rich history, stunning
+              landscapes, and vibrant culture. Whether you`re seeking
               off-the-beaten-path experiences or iconic landmarks, our curated
               tours provide the perfect opportunity to immerse yourself in the
               essence of Portugal. Get ready to create lasting memories and
               discover hidden gems with our expertly crafted tours.
             </p>
             <Link to='/tourpage'>
-              <button class='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
+              <button className='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
                 Explore
                 <svg
-                  class='w-5 h-5'
+                  className='w-5 h-5'
                   stroke='currentColor'
-                  stroke-width='1.5'
+                  strokeWidth='1.5'
                   viewBox='0 0 24 24'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'
                 >
                   <path
                     d='M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5'
-                    stroke-linejoin='round'
-                    stroke-linecap='round'
+                    strokeLinejoin='round'
+                    strokeLinecap='round'
                   ></path>
                 </svg>
               </button>
@@ -108,24 +107,24 @@ function AllServices() {
               routine inspections to major repairs, our skilled technicians have
               you covered. With a focus on reliability and efficiency, we
               provide a wide range of services to keep your drive smooth and
-              worry-free. Trust us to maintain your vehicle's performance and
+              worry-free. Trust us to maintain your vehicle`s performance and
               safety, so you can focus on the road ahead with confidence.
             </p>
             <Link to='/carservice'>
-              <button class='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
+              <button className='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
                 Explore
                 <svg
-                  class='w-5 h-5'
+                  className='w-5 h-5'
                   stroke='currentColor'
-                  stroke-width='1.5'
+                  strokeWidth='1.5'
                   viewBox='0 0 24 24'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'
                 >
                   <path
                     d='M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5'
-                    stroke-linejoin='round'
-                    stroke-linecap='round'
+                    strokeLinejoin='round'
+                    strokeLinecap='round'
                   ></path>
                 </svg>
               </button>
@@ -145,28 +144,28 @@ function AllServices() {
             <p className='my-6 dark:text-gray-600'>
               Stay ahead of the curve with our news section dedicated to
               providing drivers with the latest updates, insights, and industry
-              trends. Whether it's news on road regulations, technology
-              advancements, or industry developments, we've got you covered. Our
+              trends. Whether it`s news on road regulations, technology
+              advancements, or industry developments, we`ve got you covered. Our
               curated articles and informative content aim to keep you informed
               and empowered, ensuring you have the knowledge you need to
               navigate your journey effectively. Stay connected, stay informed,
               and drive with confidence.
             </p>
             <Link to='/news'>
-              <button class='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
+              <button className='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
                 Explore
                 <svg
-                  class='w-5 h-5'
+                  className='w-5 h-5'
                   stroke='currentColor'
-                  stroke-width='1.5'
+                  strokeWidth='1.5'
                   viewBox='0 0 24 24'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'
                 >
                   <path
                     d='M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5'
-                    stroke-linejoin='round'
-                    stroke-linecap='round'
+                    strokeLinejoin='round'
+                    strokeLinecap='round'
                   ></path>
                 </svg>
               </button>
