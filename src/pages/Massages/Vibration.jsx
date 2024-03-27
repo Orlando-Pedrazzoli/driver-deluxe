@@ -60,14 +60,14 @@ function Vibration({ MapsComponent }) {
                   way.
                 </p>
                 <h1 className='font-semibold'>
-                  Common body parts treated by vibrations
+                  Common body parts treated by vibrations:
                 </h1>
                 <ul>
-                  <li>Shoulder</li>
-                  <li>Arm</li>
-                  <li>Upper back</li>
-                  <li>Lower back</li>
-                  <li>Calf</li>
+                  <li>- Shoulder</li>
+                  <li>- Arm</li>
+                  <li>- Upper back</li>
+                  <li>- Lower back</li>
+                  <li>- Calf</li>
                 </ul>
               </div>
             </div>
