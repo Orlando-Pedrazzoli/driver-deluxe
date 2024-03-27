@@ -56,6 +56,31 @@ function News() {
                     <span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 dark:bg-gray-700 dark:text-gray-400'>
                       {article.publishedAt}
                     </span>
+                    {article.url && (
+                      <a
+                        href={article.url}
+                        style={{
+                          color: 'inherit',
+                          paddingLeft: 40,
+                          textDecoration: 'none',
+                          cursor: 'pointer',
+                        }}
+                        onMouseEnter={e => (
+                          (e.target.style.color = 'blue'),
+                          (e.target.style.textDecoration = 'underline')
+                        )}
+                        onMouseLeave={e => (
+                          (e.target.style.color = 'inherit'),
+                          (e.target.style.textDecoration = 'none')
+                        )}
+                      >
+                        <span
+                          style={{ color: 'inherit', textDecoration: 'none' }}
+                        >
+                          Read More
+                        </span>
+                      </a>
+                    )}
                   </div>
                 </div>
               );
