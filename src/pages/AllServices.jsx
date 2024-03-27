@@ -29,7 +29,7 @@ function AllServices() {
               journey.
             </p>
             <Link to='/massages'>
-              <button className='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
+              <button className='flex items-center mt-4 bg-blue-500 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-blue-400 duration-300 hover:gap-2 hover:translate-x-3'>
                 Explore
                 <svg
                   className='w-5 h-5'
@@ -50,11 +50,7 @@ function AllServices() {
           </div>
         </div>
         <div className='flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse'>
-          <img
-            src={tourimg}
-            alt=''
-            className='h-80 dark:bg-gray-500 aspect-video'
-          />
+          <img src={tourimg} alt='' className='h-80 bg-blue-500 aspect-video' />
           <div className='flex flex-col justify-center flex-1 p-6 dark:bg-gray-50'>
             <h3 className='text-3xl font-bold'>
               Explore Tours around Portugal
@@ -71,7 +67,7 @@ function AllServices() {
               discover hidden gems with our expertly crafted tours.
             </p>
             <Link to='/tourpage'>
-              <button className='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
+              <button className='flex items-center mt-4 bg-blue-500 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-blue-400 duration-300 hover:gap-2 hover:translate-x-3'>
                 Explore
                 <svg
                   className='w-5 h-5'
@@ -111,7 +107,7 @@ function AllServices() {
               safety, so you can focus on the road ahead with confidence.
             </p>
             <Link to='/carservice'>
-              <button className='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
+              <button className='flex items-center mt-4 bg-blue-500 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-blue-400 duration-300 hover:gap-2 hover:translate-x-3'>
                 Explore
                 <svg
                   className='w-5 h-5'
@@ -152,7 +148,7 @@ function AllServices() {
               and drive with confidence.
             </p>
             <Link to='/news'>
-              <button className='flex items-center bg-gray-600 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-gray-400 duration-300 hover:gap-2 hover:translate-x-3'>
+              <button className='flex items-center mt-4 bg-blue-500 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-blue-400 duration-300 hover:gap-2 hover:translate-x-3'>
                 Explore
                 <svg
                   className='w-5 h-5'
