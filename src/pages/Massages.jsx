@@ -25,7 +25,7 @@ function Massages() {
                     className='h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]'
                   />
                   <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 transition duration-300 opacity-0 group-hover:opacity-100'>
-                    <h3 className='text-white text-xl font-bold text-center'>
+                    <h3 className='text-white text-xl font-semibold text-center'>
                       VIBRATION
                     </h3>
                   </div>
@@ -44,7 +44,7 @@ function Massages() {
                     className='h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]'
                   />
                   <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 transition duration-300 opacity-0 group-hover:opacity-100'>
-                    <h3 className='text-white text-xl font-bold text-center'>
+                    <h3 className='text-white text-xl font-semibold text-center'>
                       REFLEXOLOGY
                     </h3>
                   </div>
@@ -63,7 +63,7 @@ function Massages() {
                     className='h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]'
                   />
                   <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 transition duration-300 opacity-0 group-hover:opacity-100'>
-                    <h3 className='text-white text-xl font-bold text-center'>
+                    <h3 className='text-white text-xl font-semibold text-center'>
                       CHAIR MASSAGE
                     </h3>
                   </div>
@@ -82,7 +82,7 @@ function Massages() {
                     className='h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]'
                   />
                   <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 transition duration-300 opacity-0 group-hover:opacity-100'>
-                    <h3 className='text-white text-xl font-bold text-center'>
+                    <h3 className='text-white text-xl font-semibold text-center'>
                       SHIATSU
                     </h3>
                   </div>
