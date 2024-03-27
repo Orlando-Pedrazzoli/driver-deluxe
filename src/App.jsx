@@ -22,6 +22,12 @@ import Boschcar from './pages/MaintenaceCar/Boschcar';
 import Norauto from './pages/MaintenaceCar/Norauto';
 import Euromaster from './pages/MaintenaceCar/Euromaster';
 import Mforce from './pages/MaintenaceCar/Mforce';
+import Breadcrumb from './components/Breadcrumb';
+import AllServices from './pages/AllServices';
+import LisbonTour from './components/LisbonTour';
+import SintraTour from './components/SintraTour';
+import PortoTour from './components/PortoTour';
+import AlgarveTour from './components/AlgarveTour';
 
 function App() {
   return (
@@ -33,7 +39,7 @@ function App() {
           path='/bookings'
           element={
             <IsPrivate>
-              <Bookings MapsComponent={MapsComponent} />
+              <Bookings MapsComponent={MapsComponent} Breadcrumb={Breadcrumb} />
             </IsPrivate>
           }
         />
@@ -43,6 +49,46 @@ function App() {
           element={
             <IsPrivate>
               <News />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/lisbontour'
+          element={
+            <IsPrivate>
+              <LisbonTour />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/sintratour'
+          element={
+            <IsPrivate>
+              <SintraTour />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/portotour'
+          element={
+            <IsPrivate>
+              <PortoTour />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/algarvetour'
+          element={
+            <IsPrivate>
+              <AlgarveTour />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path='/allservices'
+          element={
+            <IsPrivate>
+              <AllServices />
             </IsPrivate>
           }
         />
@@ -66,7 +112,7 @@ function App() {
           path='/maintenance'
           element={
             <IsPrivate>
-              <Maintenance />
+              <Maintenance MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -74,7 +120,10 @@ function App() {
           path='/services/oneItem/:itemId'
           element={
             <IsPrivate>
-              <SingleService MapsComponent={MapsComponent} />
+              <SingleService
+                MapsComponent={MapsComponent}
+                Breadcrumb={<Breadcrumb prevPath='/allservices' />}
+              />
             </IsPrivate>
           }
         />

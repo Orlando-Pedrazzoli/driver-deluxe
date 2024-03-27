@@ -31,6 +31,9 @@
   justify-content: end;
   margin-right: 2rem;
 }
+.nav-links.active {
+  background-color: #1888ff;
+}
 
 .nav-item {
   display: flex;

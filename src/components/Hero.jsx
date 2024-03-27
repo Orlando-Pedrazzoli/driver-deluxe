@@ -43,7 +43,7 @@ function Hero() {
           Ready to hit the road with confidence and savings? Sign up now and
           embark on this exciting journey!
         </p>
-        <Link to='/services'>
+        <Link to='/allservices'>
           <motion.button
             style={{
               border,

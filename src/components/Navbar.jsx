@@ -85,6 +85,19 @@ function Navbar() {
               onMouseLeave={onMouseLeave}
             >
               <Link
+                to='/allservices'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                All <FontAwesomeIcon />
+              </Link>
+            </li>
+            <li
+              className='nav-item'
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
+              <Link
                 to='/services'
                 className='nav-links'
                 onClick={closeMobileMenu}
@@ -111,7 +124,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Vehicle Maintenance
+                Car Service
               </Link>
             </li>
             <li className='nav-item'>

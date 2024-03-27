@@ -9,7 +9,7 @@ import { AuthContext } from '@/context/auth.context';
 import { addBooking } from '@/api/services.api';
 import dayjs from 'dayjs';
 
-function ProductPage() {
+function ProductPage({ MapsComponent }) {
   const [service, setService] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
@@ -106,8 +106,24 @@ function ProductPage() {
                       Book now
                     </button>
                     <Link to={`/${formattedServiceType}`}>
-                      <button className='mt-8 ml-6 inline-block rounded bg-blue-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-600 focus:outline-none focus:ring focus:ring-yellow-400'>
-                        Go Back
+                      <button
+                        className='cursor-pointer duration-200 hover:scale-125 active:scale-100 flex items-center justify-center'
+                        title='Go Back'
+                      >
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='40px'
+                          height='40px'
+                          viewBox='0 0 24 24'
+                          className='stroke-blue-500 mt-2'
+                        >
+                          <path
+                            strokeLinejoin='round'
+                            strokeLinecap='round'
+                            strokeWidth='1.5'
+                            d='M11 6L5 12M5 12L11 18M5 12H19'
+                          ></path>
+                        </svg>
                       </button>
                     </Link>
                   </div>

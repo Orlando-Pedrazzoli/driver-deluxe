@@ -16,91 +16,80 @@ function TourPage() {
           </header>
 
           <ul className='mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
-            <Link to='/vibration'>
+            <Link to='/lisbontour'>
               <li>
-                <div href='#' className='group block overflow-hidden'>
+                <div className='group block relative overflow-hidden'>
                   <img
                     src={LisbonImg}
-                    alt=''
+                    alt='Lisbon'
                     className='h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]'
                   />
-
-                  <div className='relative bg-white pt-3'>
-                    <h3 className='text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4'>
+                  <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 transition duration-300 opacity-0 group-hover:opacity-100'>
+                    <h3 className='text-white text-xl font-bold text-center'>
                       LISBOA
                     </h3>
-
-                    <p className='mt-2'>
-                      <span className='sr-only'> Regular Price </span>
-                    </p>
                   </div>
                 </div>
+                <h3 className='mt-2 text-sm font-bold text-gray-700 group-hover:underline group-hover:underline-offset-4'>
+                  LISBOA
+                </h3>
               </li>
             </Link>
-
-            <Link to='/reflexology'>
+            <Link to='/sintratour'>
               <li>
-                <div href='#' className='group block overflow-hidden'>
+                <div className='group block relative overflow-hidden'>
                   <img
                     src={sintraImg}
-                    alt=''
+                    alt='Sintra'
                     className='h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]'
                   />
-
-                  <div className='relative bg-white pt-3'>
-                    <h3 className='text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4'>
-                      SINTRA
+                  <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 transition duration-300 opacity-0 group-hover:opacity-100'>
+                    <h3 className='text-white text-xl font-bold text-center'>
+                      SINTRA & CASCAIS
                     </h3>
-
-                    <p className='mt-2'>
-                      <span className='sr-only'> Regular Price </span>
-                    </p>
                   </div>
                 </div>
+                <h3 className='mt-2 text-sm font-bold text-gray-700 group-hover:underline group-hover:underline-offset-4'>
+                  SINTRA & CASCAIS
+                </h3>
               </li>
             </Link>
-
-            <Link to='/chairmassage'>
+            <Link to='/portotour'>
               <li>
-                <div href='#' className='group block overflow-hidden'>
+                <div className='group block relative overflow-hidden'>
                   <img
                     src={portoImg}
-                    alt=''
+                    alt='Sintra'
                     className='h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]'
                   />
-
-                  <div className='relative bg-white pt-3'>
-                    <h3 className='text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4'>
+                  <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 transition duration-300 opacity-0 group-hover:opacity-100'>
+                    <h3 className='text-white text-xl font-bold text-center'>
                       PORTO
                     </h3>
-
-                    <p className='mt-2'>
-                      <span className='sr-only'> Regular Price </span>
-                    </p>
                   </div>
                 </div>
+                <h3 className='mt-2 text-sm font-bold text-gray-700 group-hover:underline group-hover:underline-offset-4'>
+                  PORTO
+                </h3>
               </li>
             </Link>
-
-            <Link to='/shiatsu'>
+            <Link to='/algarvetour'>
               <li>
-                <div href='#' className='group block overflow-hidden'>
+                <div className='group block relative overflow-hidden'>
                   <img
                     src={algarveImg}
-                    alt=''
+                    alt='Sintra'
                     className='h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]'
                   />
-
-                  <div className='relative bg-white pt-3'>
-                    <h3 className='text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4'>
+                  <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 transition duration-300 opacity-0 group-hover:opacity-100'>
+                    <h3 className='text-white text-xl font-bold text-center'>
                       ALGARVE
                     </h3>
-
-                    <p className='mt-2'>
-                      <span className='sr-only'> Regular Price </span>
-                    </p>
                   </div>
                 </div>
+                <h3 className='mt-2 text-sm font-bold text-gray-700 group-hover:underline group-hover:underline-offset-4'>
+                  ALGARVE
+                </h3>
               </li>
             </Link>
           </ul>

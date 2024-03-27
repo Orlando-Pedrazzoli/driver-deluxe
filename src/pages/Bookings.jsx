@@ -6,7 +6,7 @@ import { deleteBooking } from '@/api/services.api';
 import { message } from 'antd';
 import { useEffect } from 'react';
 
-function Bookings({ MapsComponent }) {
+function Bookings({ MapsComponent, Breadcrumb }) {
   const { user } = useContext(AuthContext);
 
   const [bookings, setBookings] = useState(null);
@@ -40,6 +40,7 @@ function Bookings({ MapsComponent }) {
   }, []);
   return (
     <div>
+      <Breadcrumb />
       <div style={{ margin: 'auto' }}>
         <h2 className='text-xl font-semibold text-center p-10'>
           Your Bookings:

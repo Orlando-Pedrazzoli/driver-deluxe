@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { getService } from '@/api/services.api';
 import vibrationImg from '../../assets/vibration.png';
-import marker1 from '../../assets/marker1.png';
 import { Link } from 'react-router-dom';
+import redicon from '../../assets/redicon.png';
 
 function Vibration({ MapsComponent }) {
   const [services, setServices] = useState();
@@ -42,6 +42,7 @@ function Vibration({ MapsComponent }) {
                   d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z'
                 ></path>
               </svg>
+
               <div className='space-y-2'>
                 <p className='text-lg font-medium leadi'>Vibration:</p>
                 <p className='leadi'>
@@ -87,10 +88,6 @@ function Vibration({ MapsComponent }) {
       </section>
 
       <div className='m-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <h1 className='text-center font-semibold text-2xl mb-6'>
-          Check all Massage Houses on the map with blue icon
-          <img src={marker1} alt='Icon' className='inline-block h-8 w-8 ml-2' />
-        </h1>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8'>
           {services &&
             services.map(service => (
@@ -139,6 +136,14 @@ function Vibration({ MapsComponent }) {
       </div>
       <hr style={{ 'padding-bottom': 50 }}></hr>
       <div style={{ 'padding-bottom': 50 }}>
+        <h1 className='text-center font-semibold text-2xl mb-6'>
+          Check all Massage Houses on the map with red icon
+          <img
+            src={redicon}
+            alt='Icon'
+            className='inline-block h-10 w-10 ml-2'
+          />
+        </h1>
         <MapsComponent />
       </div>
     </>
