@@ -1,13 +1,8 @@
 import { useState, useContext } from 'react';
 import { AuthContext } from '@/context/auth.context';
-import Dropdown from '../components/Dropdown';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBars,
-  faTimes,
-  faCaretDown,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './CSS/Navbar.css';
 
 function Navbar() {
@@ -98,7 +93,7 @@ function Navbar() {
               onMouseLeave={onMouseLeave}
             >
               <Link
-                to='/services'
+                to='/massages'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
@@ -120,7 +115,7 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/maintenance'
+                to='/carservice'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >

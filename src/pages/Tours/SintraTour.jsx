@@ -1,11 +1,11 @@
 import React from 'react';
-import nationalpalaceimg from '../assets/nationalpalace.jpg';
-import sintraimg from '../assets/sintramain.jpg';
-import penapalaceimg from '../assets/penapalace.jpg';
-import seteaisimg from '../assets/seteais.jpg';
-import cabodarocaimg from '../assets/cabodaroca.jpg';
-import cascaisimg from '../assets/cascais.jpg';
-import estorilimg from '../assets/estoril.jpg';
+import nationalpalaceimg from '../../assets/nationalpalace.jpg';
+import sintraimg from '../../assets/sintramain.jpg';
+import penapalaceimg from '../../assets/penapalace.jpg';
+import seteaisimg from '../../assets/seteais.jpg';
+import cabodarocaimg from '../../assets/cabodaroca.jpg';
+import cascaisimg from '../../assets/cascais.jpg';
+import estorilimg from '../../assets/estoril.jpg';
 function SintraTour() {
   const videoLink =
     'https://www.youtube.com/watch?v=Vu5JHrcV-Ok&ab_channel=TravelPenguin';

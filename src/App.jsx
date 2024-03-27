@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import News from './pages/News';
-import Services from './pages/Services';
+import Massages from './pages/Massages';
 import ContactUs from './pages/ContactUs';
 import Footer from './components/Footer';
 import Vibration from './pages/Massages/Vibration';
@@ -17,17 +17,17 @@ import IsAnon from './components/IsAnon';
 import IsPrivate from './components/IsPrivate';
 import MapsComponent from './components/MapsComponent';
 import TourPage from './pages/TourPage';
-import Maintenance from './pages/Maintenance';
 import Boschcar from './pages/MaintenaceCar/Boschcar';
 import Norauto from './pages/MaintenaceCar/Norauto';
 import Euromaster from './pages/MaintenaceCar/Euromaster';
 import Mforce from './pages/MaintenaceCar/Mforce';
 import Breadcrumb from './components/Breadcrumb';
 import AllServices from './pages/AllServices';
-import LisbonTour from './components/LisbonTour';
-import SintraTour from './components/SintraTour';
-import PortoTour from './components/PortoTour';
-import AlgarveTour from './components/AlgarveTour';
+import LisbonTour from './pages/Tours/LisbonTour';
+import SintraTour from './pages/Tours/SintraTour';
+import PortoTour from './pages/Tours/PortoTour';
+import AlgarveTour from './pages/Tours/AlgarveTour';
+import CarService from './pages/CarService';
 
 function App() {
   return (
@@ -93,10 +93,10 @@ function App() {
           }
         />
         <Route
-          path='/services'
+          path='/massages'
           element={
             <IsPrivate>
-              <Services />
+              <Massages />
             </IsPrivate>
           }
         />
@@ -109,10 +109,10 @@ function App() {
           }
         />
         <Route
-          path='/maintenance'
+          path='/carservice'
           element={
             <IsPrivate>
-              <Maintenance MapsComponent={MapsComponent} />
+              <CarService MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />

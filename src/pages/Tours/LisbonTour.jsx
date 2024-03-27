@@ -1,11 +1,11 @@
 import React from 'react';
-import rossioimg from '../assets/rossio.jpg';
-import lisbonimg from '../assets/lisbon.jpg';
-import casteloimg from '../assets/castelo.jpg';
-import jeronimoimg from '../assets/jeronimo.jpg';
-import discoveryimg from '../assets/discovery.jpg';
-import towerimg from '../assets/tower.jpg';
-import nationsparkimg from '../assets/nationspark.jpg';
+import rossioimg from '../../assets/rossio.jpg';
+import lisbonimg from '../../assets/lisbon.jpg';
+import casteloimg from '../../assets/castelo.jpg';
+import jeronimoimg from '../../assets/jeronimo.jpg';
+import discoveryimg from '../../assets/discovery.jpg';
+import towerimg from '../../assets/tower.jpg';
+import nationsparkimg from '../../assets/nationspark.jpg';
 
 function LisbonTour() {
   const videoLink =
@@ -48,16 +48,22 @@ function LisbonTour() {
         <div className='grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
           <a
             rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50'
+            href='https://maps.app.goo.gl/w96YVnMqWZ269BVe7'
+            target='_blank'
+            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'
           >
             <img
               role='presentation'
               className='object-cover w-full rounded h-44 dark:bg-gray-500'
               src={rossioimg}
             />
+            <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+              <span className='text-white text-lg font-semibold'>
+                View on Map
+              </span>
+            </div>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>Rossio Square</h3>
+              <h3 className='text-2xl font-semibold'>Rossio Square</h3>
               <span className='text-xs dark:text-gray-600'>
                 Explore Portugal
               </span>

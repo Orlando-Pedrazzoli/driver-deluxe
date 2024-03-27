@@ -1,11 +1,11 @@
 import React from 'react';
-import vilanovaimg from '../assets/vilanova.jpg';
-import portoimg from '../assets/portoimg.jpg';
-import majesticimg from '../assets/majestic.jpg';
-import saobentoimg from '../assets/saobento.jpg';
-import squarebattleimg from '../assets/squarebattle.jpg';
-import cathedralimg from '../assets/cathedral.jpg';
-import portwineimg from '../assets/portwine.jpg';
+import vilanovaimg from '../../assets/vilanova.jpg';
+import portoimg from '../../assets/portoimg.jpg';
+import majesticimg from '../../assets/majestic.jpg';
+import saobentoimg from '../../assets/saobento.jpg';
+import squarebattleimg from '../../assets/squarebattle.jpg';
+import cathedralimg from '../../assets/cathedral.jpg';
+import portwineimg from '../../assets/portwine.jpg';
 function PortoTour() {
   const videoLink =
     'https://www.youtube.com/watch?v=P170_f49pv4&ab_channel=AroundTheWorld4K';

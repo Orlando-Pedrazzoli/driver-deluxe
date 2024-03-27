@@ -1,11 +1,11 @@
 import React from 'react';
-import sagresimg from '../assets/sagres.jpg';
-import algarveimg from '../assets/algarve2.jpg';
-import lagosimg from '../assets/lagos.jpg';
-import vilamouraimg from '../assets/vilamoura.jpg';
-import albufeiraimg from '../assets/albufeira.jpg';
-import louleimg from '../assets/loule.jpg';
-import portimaoimg from '../assets/portimao.jpg';
+import sagresimg from '../../assets/algarve.jpg';
+import algarveimg from '../../assets/algarve2.jpg';
+import lagosimg from '../../assets/lagos.jpg';
+import vilamouraimg from '../../assets/vilamoura.jpg';
+import albufeiraimg from '../../assets/albufeira.jpg';
+import louleimg from '../../assets/loule.jpg';
+import portimaoimg from '../../assets/portimao.jpg';
 function AlgarveTour() {
   const videoLink =
     'https://www.youtube.com/watch?v=d6L88EoA34o&ab_channel=Loz%27sLeisure';

@@ -4,7 +4,7 @@ import euromasterImg from '../assets/euromaster.jpg';
 import mforceImg from '../assets/mforce.jpg';
 import norautoImg from '../assets/norauto.jpg';
 
-function Maintenance() {
+function CarService() {
   return (
     <div>
       <section>
@@ -99,4 +99,4 @@ function Maintenance() {
   );
 }
 
-export default Maintenance;
+export default CarService;

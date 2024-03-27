@@ -4,7 +4,7 @@ import vibrationImg from '../assets/vibration.png';
 import reflexologyImg from '../assets/reflexology.png';
 import shiatsuImg from '../assets/shiatsu.png';
 
-function ServiceList() {
+function Massages() {
   return (
     <div>
       <section>
@@ -99,4 +99,4 @@ function ServiceList() {
   );
 }
 
-export default ServiceList;
+export default Massages;
