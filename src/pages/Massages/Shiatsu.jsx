@@ -58,6 +58,16 @@ function Shiatsu() {
                   examine a patient, a shiatsu practitioner uses palpation and,
                   sometimes, pulse diagnosis.
                 </p>
+                <h1 className='font-semibold'>
+                  Common body parts treated by shiatsu:
+                </h1>
+                <ul>
+                  <li>- Shoulder</li>
+                  <li>- Arm</li>
+                  <li>- Upper back</li>
+                  <li>- Lower back</li>
+                  <li>- Calf</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -110,8 +120,22 @@ function Shiatsu() {
                     </strong>
                   </p>
                   <Link to={`/services/oneItem/${service._id}`}>
-                    <button className='inline-block rounded bg-indigo-600 px-8 py-3 mt-6 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500'>
-                      Details
+                    <button className='flex items-center mt-4 bg-blue-500 text-white gap-1 px-4 py-2 cursor-pointer text-gray-800 font-semibold tracking-widest rounded-md hover:bg-blue-400 duration-300 hover:gap-2 hover:translate-x-3'>
+                      View details
+                      <svg
+                        className='w-5 h-5'
+                        stroke='currentColor'
+                        strokeWidth='1.5'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                        xmlns='http://www.w3.org/2000/svg'
+                      >
+                        <path
+                          d='M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5'
+                          strokeLinejoin='round'
+                          strokeLinecap='round'
+                        ></path>
+                      </svg>
                     </button>
                   </Link>
                 </div>
