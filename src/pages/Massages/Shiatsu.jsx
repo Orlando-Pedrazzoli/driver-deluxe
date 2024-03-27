@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { getService } from '@/api/services.api';
 import { Link } from 'react-router-dom';
 import shiatsuImg from '../../assets/shiatsu.png';
+import redicon from '../../assets/redicon.png';
 
-function Shiatsu() {
+function Shiatsu({ MapsComponent }) {
   const [services, setServices] = useState();
   const [loading, setLoading] = useState(true);
 
@@ -142,6 +143,18 @@ function Shiatsu() {
               </div>
             ))}
         </div>
+      </div>
+      <hr style={{ paddingBottom: 50 }}></hr>
+      <div style={{ paddingBottom: 50 }}>
+        <h1 className='text-center font-semibold text-2xl mb-6'>
+          Check all Massage Houses on the map with red icon
+          <img
+            src={redicon}
+            alt='Icon'
+            className='inline-block h-10 w-10 ml-2'
+          />
+        </h1>
+        <MapsComponent />
       </div>
     </>
   );
