@@ -6,6 +6,7 @@ import saobentoimg from '../../assets/saobento.jpg';
 import squarebattleimg from '../../assets/squarebattle.jpg';
 import cathedralimg from '../../assets/cathedral.jpg';
 import portwineimg from '../../assets/portwine.jpg';
+
 function PortoTour() {
   const videoLink =
     'https://www.youtube.com/watch?v=P170_f49pv4&ab_channel=AroundTheWorld4K';
@@ -27,17 +28,16 @@ function PortoTour() {
               <h3 className='text-2xl font-semibold sm:text-4xl group-hover:underline'>
                 Porto
               </h3>
-
               <span className='text-xs dark:text-gray-600'>Explore Video</span>
               <p>
                 Porto, also known as Invicta is one of the most visited cities
                 in Europe. It is the town that gave the name to Portugal, in the
-                Roman period (c. 200 BC) it was called Cale or Portus Cale.It is
-                known worldwide for its bridges and old and contemporary
+                Roman period (c. 200 BC) it was called Cale or Portus Cale. It
+                is known worldwide for its bridges and old and contemporary
                 architecture, and for its historical centre, as well as for its
                 wine and cuisine, with traditional dishes such as "Tripe with
-                white beans" and the famous "Francesinha" . In Vila Nova de
-                Gaia, on the opposite bank of the River, we find the port wine
+                white beans" and the famous "Francesinha". In Vila Nova de Gaia,
+                on the opposite bank of the River, we find the port wine
                 cellars, where you can get to know the history of the famous
                 port wine and where you can taste the different varieties.
               </p>
@@ -45,16 +45,24 @@ function PortoTour() {
           </div>
         </a>
         <div className='grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={vilanovaimg}
-            />
+          {/* Vila Nova de Gaia Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/ftVNicprRsiNMoSN7'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={vilanovaimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
               <h3 className='text-2xl font-semibold '>Vila Nova de Gaia</h3>
               <span className='text-xs dark:text-gray-600'>
@@ -70,17 +78,25 @@ function PortoTour() {
                 Metro and in the lower deck the pedestrians and automobiles.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={majesticimg}
-            />
+          </div>
+          {/* Majestic Cafe Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/cQFwYDJjCus8gCk96'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={majesticimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
               <h3 className='text-2xl font-semibold '>Majestic Cafe</h3>
               <span className='text-xs dark:text-gray-600'>
@@ -95,17 +111,25 @@ function PortoTour() {
                 shots for national or foreign films.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={saobentoimg}
-            />
+          </div>
+          {/* St. Bento Train Station Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/9duwebmyQbryj7ie6'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={saobentoimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
               <h3 className='text-2xl font-semibold '>
                 St. Bento Train Station
@@ -116,24 +140,32 @@ function PortoTour() {
               <p>
                 The St. Bento Train Station, of French influence, is the
                 ex-libris of the Portuguese railways serving the city of Porto.
-                It is famous for it stunning tile panels depicting various
+                It is famous for its stunning tile panels depicting various
                 stories of bygone days in the North of the country, being
                 portrayed, among others, the Tournament of Arcos de Valdevez, D.
                 João I and D. Filipa de Lencastre in Porto, in 1387, and the
                 Conquest of Ceuta.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={squarebattleimg}
-            />
+          </div>
+          {/* Battle Square Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/eV8F68U2ff7ZeBPC6'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={squarebattleimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
               <h3 className='text-2xl font-semibold '>Battle Square</h3>
               <span className='text-xs dark:text-gray-600'>
@@ -149,17 +181,25 @@ function PortoTour() {
                 Street, the main commercial artery of downtown of Porto.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={cathedralimg}
-            />
+          </div>
+          {/* The Cathedral Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/MVWVcnfeBTjcpQVc6'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={cathedralimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
               <h3 className='text-2xl font-semibold '>The Cathedral</h3>
               <span className='text-xs dark:text-gray-600'>
@@ -175,17 +215,25 @@ function PortoTour() {
                 changes over the centuries.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={portwineimg}
-            />
+          </div>
+          {/* Port wine cellars Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/aR21C3PMzsigDkXW7'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={portwineimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
               <h3 className='text-2xl font-semibold '>Port wine cellars</h3>
               <span className='text-xs dark:text-gray-600'>
@@ -200,7 +248,7 @@ function PortoTour() {
                 Vila Nova de Gaia became known as "Port Wine".
               </p>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>

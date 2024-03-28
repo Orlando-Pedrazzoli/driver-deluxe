@@ -9,6 +9,12 @@ import { AuthContext } from '@/context/auth.context';
 import { addBooking } from '@/api/services.api';
 import dayjs from 'dayjs';
 
+const buttonStyle = {
+  backgroundColor: 'blue',
+  borderColor: 'blue',
+  color: 'white',
+};
+
 function ProductPage({ MapsComponent }) {
   const [service, setService] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
@@ -112,15 +118,15 @@ function ProductPage({ MapsComponent }) {
                     </button>
                     <Link to={`/${formattedServiceType}`}>
                       <button
-                        className='cursor-pointer duration-200 hover:scale-125 active:scale-100 flex items-center justify-center'
+                        className='cursor-pointer duration-200 hover:scale-125 active:scale-100 flex items-center justify-center mt-4'
                         title='Go Back'
                       >
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
-                          width='40px'
-                          height='40px'
+                          width='30px'
+                          height='30px'
                           viewBox='0 0 24 24'
-                          className='stroke-blue-500 mt-2'
+                          className='stroke-blue-500'
                         >
                           <path
                             strokeLinejoin='round'
@@ -129,6 +135,7 @@ function ProductPage({ MapsComponent }) {
                             d='M11 6L5 12M5 12L11 18M5 12H19'
                           ></path>
                         </svg>
+                        <span className='mr-2'> Back</span>
                       </button>
                     </Link>
                   </div>

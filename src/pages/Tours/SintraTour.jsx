@@ -6,6 +6,7 @@ import seteaisimg from '../../assets/seteais.jpg';
 import cabodarocaimg from '../../assets/cabodaroca.jpg';
 import cascaisimg from '../../assets/cascais.jpg';
 import estorilimg from '../../assets/estoril.jpg';
+
 function SintraTour() {
   const videoLink =
     'https://www.youtube.com/watch?v=Vu5JHrcV-Ok&ab_channel=TravelPenguin';
@@ -27,9 +28,7 @@ function SintraTour() {
               <h3 className='text-2xl font-semibold sm:text-4xl group-hover:underline'>
                 Sintra & Cascais
               </h3>
-
               <span className='text-xs dark:text-gray-600'>Explore Video</span>
-
               <p>
                 The town of Sintra is one of the best known Portuguese villages,
                 not only for its architectural and natural beauty but also by
@@ -48,21 +47,28 @@ function SintraTour() {
           </div>
         </a>
         <div className='grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={nationalpalaceimg}
-            />
+          {/* National Palace of Sintra Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/yaa1wqiNpXRrywVd8'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={nationalpalaceimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>
+              <h3 className='text-2xl font-semibold'>
                 National Palace of Sintra
               </h3>
-
               <p>
                 The National Palace of Sintra is located in the centre of the
                 village and has been, since the time of the Moors, a royal
@@ -74,20 +80,27 @@ function SintraTour() {
                 present at the Tower of Mecca.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={penapalaceimg}
-            />
+          </div>
+          {/* Pena Palace Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/kmw2uoZoBS9rPd847'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={penapalaceimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>Pena Palace</h3>
-
+              <h3 className='text-2xl font-semibold'>Pena Palace</h3>
               <p>
                 The Pena Palace stands in as one of the highest peaks of the
                 Sintra Mountain and displays a wide variety of architectural
@@ -98,20 +111,27 @@ function SintraTour() {
                 find German and Oriental porcelains stained-glass windows.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={seteaisimg}
-            />
+          </div>
+          {/* Seteais Palace Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/tX2WVETesptaFDo99'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={seteaisimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>Seteais Palace</h3>
-
+              <h3 className='text-2xl font-semibold'>Seteais Palace</h3>
               <p>
                 The Seteais Palace was built in the 18th century and has
                 privileged views of the sea, the Valley and the Sintra
@@ -123,20 +143,27 @@ function SintraTour() {
                 wonderful luxury hotel.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={cabodarocaimg}
-            />
+          </div>
+          {/* Cape Roca Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/67cxkkW8bo1WC4T39'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={cabodarocaimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>Cape Roca</h3>
-
+              <h3 className='text-2xl font-semibold'>Cape Roca</h3>
               <p>
                 The Cape Roca is the westernmost point of continental Europe and
                 was mentioned by Luís de Camões as the place "where the land
@@ -146,20 +173,27 @@ function SintraTour() {
                 third oldest lighthouse on the coast of Portugal.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={cascaisimg}
-            />
+          </div>
+          {/* Cascais Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/yLRgK6XiQhGbPnd67'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={cascaisimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>Cascais</h3>
-
+              <h3 className='text-2xl font-semibold'>Cascais</h3>
               <p>
                 Cascais is a former fishing village that since the 19th century
                 has developed a lot, but in the 20th century became known dubbed
@@ -171,20 +205,27 @@ function SintraTour() {
                 Cascais Guesthouse.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={estorilimg}
-            />
+          </div>
+          {/* Estoril Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/ZpcRwsY6Exr1GfRe8'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={estorilimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>Estoril</h3>
-
+              <h3 className='text-2xl font-semibold'>Estoril</h3>
               <p>
                 Estoril is mainly known in the sports panorama more specifically
                 through motor racing and tennis. It was however during and after
@@ -195,7 +236,7 @@ function SintraTour() {
                 and cultural panorama.
               </p>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>

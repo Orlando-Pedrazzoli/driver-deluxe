@@ -5,6 +5,7 @@ import { getUserBookings } from '@/api/services.api';
 import { deleteBooking } from '@/api/services.api';
 import { message } from 'antd';
 import { useEffect } from 'react';
+import whatsappimg from '../assets/whatsapp.png';
 
 function Bookings({ MapsComponent, Breadcrumb }) {
   const { user } = useContext(AuthContext);
@@ -83,6 +84,17 @@ function Bookings({ MapsComponent, Breadcrumb }) {
                             <p className='text-sm line-through dark:text-gray-600'>
                               40.00€
                             </p>
+                            <a
+                              href='https://api.whatsapp.com/send?phone=<YOUR_PHONE_NUMBER>'
+                              target='_blank'
+                              rel='noopener noreferrer'
+                            >
+                              <img
+                                className='w-10 mt-4'
+                                src={whatsappimg}
+                                alt='WhatsApp'
+                              />
+                            </a>
                           </div>
                         </div>
                         <div className='flex text-sm divide-x'>
@@ -119,7 +131,9 @@ function Bookings({ MapsComponent, Breadcrumb }) {
                               ></rect>
                               <path d='M328,88V40c0-13.458-9.488-24-21.6-24H205.6C193.488,16,184,26.542,184,40V88H64v32H448V88ZM216,48h80V88H216Z'></path>
                             </svg>
-                            <span>Remove</span>
+                            <span className='font-bold text-red-600'>
+                              Remove
+                            </span>
                           </button>
                         </div>
                       </div>

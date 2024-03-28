@@ -130,21 +130,7 @@ function Navbar() {
                 Massages <FontAwesomeIcon />
               </Link>
             </li>
-            <li
-              className='nav-item'
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-            >
-              <Link
-                to='/tourpage'
-                className={`nav-links ${
-                  activeLink === '/tourpage' ? 'active' : ''
-                }`}
-                onClick={() => handleLinkClick('/tourpage')}
-              >
-                Tours <FontAwesomeIcon />
-              </Link>
-            </li>
+
             <li className='nav-item'>
               <Link
                 to='/carservice'
@@ -165,6 +151,21 @@ function Navbar() {
                 onClick={() => handleLinkClick('/news')}
               >
                 News
+              </Link>
+            </li>
+            <li
+              className='nav-item'
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
+              <Link
+                to='/tourpage'
+                className={`nav-links ${
+                  activeLink === '/tourpage' ? 'active' : ''
+                }`}
+                onClick={() => handleLinkClick('/tourpage')}
+              >
+                Tours <FontAwesomeIcon />
               </Link>
             </li>
             <li className='nav-item'>

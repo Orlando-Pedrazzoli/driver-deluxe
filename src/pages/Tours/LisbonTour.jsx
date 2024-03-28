@@ -28,7 +28,6 @@ function LisbonTour() {
               <h3 className='text-2xl font-semibold sm:text-4xl group-hover:underline'>
                 Lisbon
               </h3>
-
               <span className='text-xs dark:text-gray-600'>Explore Video</span>
               <p>
                 Known as the city on the seven hills its name comes from
@@ -46,22 +45,24 @@ function LisbonTour() {
           </div>
         </a>
         <div className='grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-          <a
-            rel='noopener noreferrer'
-            href='https://maps.app.goo.gl/w96YVnMqWZ269BVe7'
-            target='_blank'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={rossioimg}
-            />
-            <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
-              <span className='text-white text-lg font-semibold'>
-                View on Map
-              </span>
-            </div>
+          {/* Rossio Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/w96YVnMqWZ269BVe7'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={rossioimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
               <h3 className='text-2xl font-semibold'>Rossio Square</h3>
               <span className='text-xs dark:text-gray-600'>
@@ -77,19 +78,27 @@ function LisbonTour() {
                 and Restraint, qualities assigned to D. Pedro IV.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={casteloimg}
-            />
+          </div>
+          {/* St. George Castle Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/s46xUtjYZgH7HvvG7'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={casteloimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>St. George Castle</h3>
+              <h3 className='text-2xl font-semibold'>St. George Castle</h3>
               <span className='text-xs dark:text-gray-600'>
                 Explore Portugal
               </span>
@@ -104,19 +113,27 @@ function LisbonTour() {
                 River estuary.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={jeronimoimg}
-            />
+          </div>
+          {/* Jerónimos Monastery Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/Atg86gDeYDo4wh5p6'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={jeronimoimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>Jerónimos Monastery</h3>
+              <h3 className='text-2xl font-semibold'>Jerónimos Monastery</h3>
               <span className='text-xs dark:text-gray-600'>
                 Explore Portugal
               </span>
@@ -132,19 +149,27 @@ function LisbonTour() {
                 are buried.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={discoveryimg}
-            />
+          </div>
+          {/* Monument to the Discoveries Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/TjS5Q8QhpLCubKHm8'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={discoveryimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>
+              <h3 className='text-2xl font-semibold'>
                 Monument to the Discoveries
               </h3>
               <span className='text-xs dark:text-gray-600'>
@@ -160,19 +185,27 @@ function LisbonTour() {
                 Discoveries, among other illustrious figures of the time.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={towerimg}
-            />
+          </div>
+          {/* Belém Tower Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/fnV1kToT5anpDeSA9'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={towerimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>Belém Tower</h3>
+              <h3 className='text-2xl font-semibold'>Belém Tower</h3>
               <span className='text-xs dark:text-gray-600'>
                 Explore Portugal
               </span>
@@ -188,19 +221,27 @@ function LisbonTour() {
                 panorama that one enjoys.
               </p>
             </div>
-          </a>
-          <a
-            rel='noopener noreferrer'
-            href='#'
-            className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block'
-          >
-            <img
-              role='presentation'
-              className='object-cover w-full rounded h-44 dark:bg-gray-500'
-              src={nationsparkimg}
-            />
+          </div>
+          {/* Park of Nations or Expo Image with Overlay */}
+          <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
+            <a
+              rel='noopener noreferrer'
+              href='https://maps.app.goo.gl/W1hxVwRFEgr4emxx5'
+              target='_blank'
+            >
+              <img
+                role='presentation'
+                className='object-cover w-full rounded h-44 dark:bg-gray-500'
+                src={nationsparkimg}
+              />
+              <div className='absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50'>
+                <span className='text-white text-lg font-semibold'>
+                  View on Map
+                </span>
+              </div>
+            </a>
             <div className='p-6 space-y-2'>
-              <h3 className='text-2xl font-semibold '>
+              <h3 className='text-2xl font-semibold'>
                 Park of Nations or Expo
               </h3>
               <span className='text-xs dark:text-gray-600'>
@@ -218,7 +259,7 @@ function LisbonTour() {
                 become the most modern area of the city of Lisbon.
               </p>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>

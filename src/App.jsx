@@ -56,7 +56,7 @@ function App() {
           path='/lisbontour'
           element={
             <IsPrivate>
-              <LisbonTour />
+              <LisbonTour MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -64,7 +64,7 @@ function App() {
           path='/sintratour'
           element={
             <IsPrivate>
-              <SintraTour />
+              <SintraTour MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -72,7 +72,7 @@ function App() {
           path='/portotour'
           element={
             <IsPrivate>
-              <PortoTour />
+              <PortoTour MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -80,7 +80,7 @@ function App() {
           path='/algarvetour'
           element={
             <IsPrivate>
-              <AlgarveTour />
+              <AlgarveTour MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />
@@ -96,7 +96,7 @@ function App() {
           path='/massages'
           element={
             <IsPrivate>
-              <Massages />
+              <Massages MapsComponent={MapsComponent} />
             </IsPrivate>
           }
         />

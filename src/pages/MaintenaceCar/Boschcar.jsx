@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { getService } from '@/api/services.api';
 import BoschcarIMG from '../../assets/boschcar.jpg';
 import { Link } from 'react-router-dom';
+import orangeicon from '../../assets/orangeicon.png';
 
-function Boschcar() {
+function Boschcar({ MapsComponent }) {
   const [services, setServices] = useState();
   const [loading, setLoading] = useState(true);
 
@@ -91,11 +92,6 @@ function Boschcar() {
       </section>
 
       <div className='m-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <h1 className='text-center font-semibold text-2xl mb-6'>
-          Check all Service Houses on the map with blue icon
-          {/*           <img src={marker1} alt='Icon' className='inline-block h-8 w-8 ml-2' />
-           */}{' '}
-        </h1>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8'>
           {services &&
             services.map(service => (
@@ -142,6 +138,18 @@ function Boschcar() {
             ))}
         </div>
       </div>
+      <h1 className='text-center font-semibold text-2xl mb-6'>
+        Check all <span className='font-bold'> BOSCH CAR SERVICES</span> on the
+        map with
+        <span className='text-orange-500 font-bold'> Orange ICON </span>
+        <img
+          src={orangeicon}
+          alt='Icon'
+          className='inline-block h-12 w-12 ml-2'
+        />
+      </h1>
+
+      <MapsComponent />
     </>
   );
 }

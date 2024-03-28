@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  background: rgb(16, 15, 15);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -142,5 +142,51 @@
     background: #fff;
     color: #1888ff;
     transition: 250ms;
+  }
+}
+@media (max-width: 800px) {
+  .nav-menu {
+    width: 100%;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+
+  .nav-links {
+    padding: 1rem;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-menu {
+    top: 60px; /* Adjusted for smaller screens */
+  }
+
+  .navbar-logo {
+    left: 10px;
+    transform: none;
+  }
+
+  .menu-icon {
+    transform: translate(-100%, 35%);
+  }
+
+  .nav-links-mobile {
+    padding: 1rem;
   }
 }
