@@ -54,9 +54,9 @@ function Hero() {
           whileTap={{
             scale: 0.985,
           }}
-          className='group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50'
+          className='group relative mt-4 flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-6 py-2 text-gray-50 transition-colors hover:bg-gray-950/50'
         >
-          <Link to='/allservices'>Start free trial</Link>
+          <Link to='/allservices'>Start free tour</Link>
           <FiArrowRight className='transition-transform group-hover:-rotate-45 group-active:-rotate-12' />
         </motion.button>
       </div>
