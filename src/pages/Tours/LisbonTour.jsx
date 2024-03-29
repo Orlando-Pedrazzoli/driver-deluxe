@@ -1,4 +1,3 @@
-import React from 'react';
 import rossioimg from '../../assets/rossio.jpg';
 import lisbonimg from '../../assets/lisbon.jpg';
 import casteloimg from '../../assets/castelo.jpg';
