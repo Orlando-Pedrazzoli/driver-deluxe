@@ -93,7 +93,7 @@ function ProductPage({ MapsComponent }) {
 
                   <div className='lg:py-24'>
                     <h2 className='text-3xl font-bold sm:text-4xl mb-4'>
-                      {service.type}
+                      Appointment for: {service.type}
                     </h2>
                     <DatePicker onChange={handleDateChange} />
                     <TimePicker
