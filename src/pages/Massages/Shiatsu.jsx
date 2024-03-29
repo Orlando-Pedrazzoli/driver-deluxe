@@ -3,7 +3,7 @@ import { getService } from '@/api/services.api';
 import { Link } from 'react-router-dom';
 import shiatsuImg from '../../assets/shiatsu.png';
 import redicon from '../../assets/redicon.png';
-import loadingIMG from '../assets/LoadingNews.gif';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function Shiatsu({ MapsComponent }) {
   const [services, setServices] = useState();

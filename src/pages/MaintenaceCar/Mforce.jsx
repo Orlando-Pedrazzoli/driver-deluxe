@@ -3,7 +3,7 @@ import { getService } from '@/api/services.api';
 import mforceIMG from '../../assets/mforce_boa.jpg';
 import { Link } from 'react-router-dom';
 import greenicon from '../../assets/green.png';
-import loadingIMG from '../assets/LoadingNews.gif';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function Mforce({ MapsComponent }) {
   const [services, setServices] = useState();

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getService } from '@/api/services.api';
 import reflexologyImg from '../../assets/reflexology.png';
 import redicon from '../../assets/redicon.png';
-import loadingIMG from '../assets/LoadingNews.gif';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function Reflexology({ MapsComponent }) {
   const [services, setServices] = useState();

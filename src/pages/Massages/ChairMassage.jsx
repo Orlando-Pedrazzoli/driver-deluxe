@@ -3,7 +3,7 @@ import { getService } from '@/api/services.api';
 import { Link } from 'react-router-dom';
 import chairImg from '../../assets/chairmassage.png';
 import redicon from '../../assets/redicon.png';
-import loadingIMG from '../assets/LoadingNews.gif';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function ChairMassage({ MapsComponent }) {
   const [services, setServices] = useState();

@@ -3,7 +3,7 @@ import { getService } from '@/api/services.api';
 import vibrationImg from '../../assets/vibration.png';
 import { Link } from 'react-router-dom';
 import redicon from '../../assets/redicon.png';
-import loadingIMG from '../assets/LoadingNews.gif';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function Vibration({ MapsComponent }) {
   const [services, setServices] = useState();

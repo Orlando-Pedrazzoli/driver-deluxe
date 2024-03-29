@@ -3,7 +3,7 @@ import { getService } from '@/api/services.api';
 import norautoIMG from '../../assets/norauto.jpg';
 import { Link } from 'react-router-dom';
 import yellowicon from '../../assets/yellow.png';
-import loadingIMG from '../assets/LoadingNews.gif';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function Norauto({ MapsComponent }) {
   const [services, setServices] = useState();

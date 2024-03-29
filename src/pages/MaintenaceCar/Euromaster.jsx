@@ -3,7 +3,7 @@ import { getService } from '@/api/services.api';
 import euromasterIMG from '../../assets/euromaster.jpg';
 import { Link } from 'react-router-dom';
 import purpleicon from '../../assets/purple.png';
-import loadingIMG from '../assets/LoadingNews.gif';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function Euromaster({ MapsComponent }) {
   const [services, setServices] = useState();

@@ -8,6 +8,7 @@ import { message } from 'antd';
 import { AuthContext } from '@/context/auth.context';
 import { addBooking } from '@/api/services.api';
 import dayjs from 'dayjs';
+import loadingIMG from '../assets/LoadingNews.gif';
 
 function ProductPage({ MapsComponent }) {
   const [service, setService] = useState(null);
@@ -66,7 +67,7 @@ function ProductPage({ MapsComponent }) {
 
   return loading ? (
     <div className='flex flex-col justify-center items-center'>
-      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <img src={loadingIMG} alt='Loading...' />
       <p>Loading...</p>
     </div>
   ) : (

@@ -3,7 +3,7 @@ import { getService } from '@/api/services.api';
 import BoschcarIMG from '../../assets/boschcar.jpg';
 import { Link } from 'react-router-dom';
 import orangeicon from '../../assets/orangeicon.png';
-import loadingIMG from '../assets/LoadingNews.gif';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function Boschcar({ MapsComponent }) {
   const [services, setServices] = useState();
