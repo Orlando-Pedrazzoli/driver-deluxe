@@ -8,7 +8,6 @@ import { message } from 'antd';
 import { AuthContext } from '@/context/auth.context';
 import { addBooking } from '@/api/services.api';
 import dayjs from 'dayjs';
-import './SingleService.css';
 
 function ProductPage({ MapsComponent }) {
   const [service, setService] = useState(null);
@@ -93,7 +92,7 @@ function ProductPage({ MapsComponent }) {
                     </h2>
                     <DatePicker onChange={handleDateChange} />
                     <TimePicker
-                      className='m-4'
+                      className='m-4 appearance-none border border-gray-300 rounded-md px-4 py-2 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline'
                       onChange={handleTimeChange}
                       defaultValue={dayjs('12:00', format)}
                       format={format}
