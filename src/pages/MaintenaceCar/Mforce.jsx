@@ -3,6 +3,7 @@ import { getService } from '@/api/services.api';
 import mforceIMG from '../../assets/mforce_boa.jpg';
 import { Link } from 'react-router-dom';
 import greenicon from '../../assets/green.png';
+import loadingIMG from '../assets/LoadingNews.gif';
 
 function Mforce({ MapsComponent }) {
   const [services, setServices] = useState();
@@ -24,7 +25,7 @@ function Mforce({ MapsComponent }) {
 
   return loading ? (
     <div className='flex flex-col justify-center items-center'>
-      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <img src={loadingIMG} alt='Loading...' />
       <p>Loading...</p>
     </div>
   ) : (

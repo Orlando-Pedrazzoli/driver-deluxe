@@ -3,6 +3,7 @@ import { getService } from '@/api/services.api';
 import euromasterIMG from '../../assets/euromaster.jpg';
 import { Link } from 'react-router-dom';
 import purpleicon from '../../assets/purple.png';
+import loadingIMG from '../assets/LoadingNews.gif';
 
 function Euromaster({ MapsComponent }) {
   const [services, setServices] = useState();
@@ -24,7 +25,7 @@ function Euromaster({ MapsComponent }) {
 
   return loading ? (
     <div className='flex flex-col justify-center items-center'>
-      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <img src={loadingIMG} alt='Loading...' />
       <p>Loading...</p>
     </div>
   ) : (

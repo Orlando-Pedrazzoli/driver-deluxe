@@ -8,7 +8,6 @@ import { message } from 'antd';
 import { AuthContext } from '@/context/auth.context';
 import { addBooking } from '@/api/services.api';
 import dayjs from 'dayjs';
-import './SingleService.css';
 
 function ProductPage({ MapsComponent }) {
   const [service, setService] = useState(null);
