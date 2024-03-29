@@ -26,7 +26,7 @@ function Bookings({ MapsComponent, Breadcrumb }) {
     try {
       await deleteBooking(userId, bookingId);
 
-      message.success('Booking deleted successfully');
+      message.success('Booking canceled successfully');
       setBookings(prevBookings =>
         prevBookings.filter(booking => booking._id !== bookingId)
       );
@@ -135,7 +135,7 @@ function Bookings({ MapsComponent, Breadcrumb }) {
                               <path d='M328,88V40c0-13.458-9.488-24-21.6-24H205.6C193.488,16,184,26.542,184,40V88H64v32H448V88ZM216,48h80V88H216Z'></path>
                             </svg>
                             <span className='font-bold text-red-600'>
-                              Remove
+                              Cancel
                             </span>
                           </button>
                         </div>
