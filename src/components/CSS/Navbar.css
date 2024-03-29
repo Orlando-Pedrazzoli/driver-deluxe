@@ -33,6 +33,7 @@
 }
 .nav-links.active {
   background-color: #1888ff;
+  border-radius: 5px;
 }
 
 .nav-item {
