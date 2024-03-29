@@ -98,7 +98,7 @@ function ProductPage({ MapsComponent }) {
                     </h2>
                     <DatePicker onChange={handleDateChange} />
                     <TimePicker
-                      className='m-4 '
+                      className='m-4 bg-blue-500 text-white px-4 py-2 rounded-sm'
                       onChange={handleTimeChange}
                       defaultValue={dayjs('12:00', format)}
                       format={format}
