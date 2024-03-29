@@ -76,6 +76,9 @@ function Bookings({ MapsComponent, Breadcrumb }) {
                             <p className='text-sm dark:text-gray-400'>
                               Time: {booking.time}
                             </p>
+                            <p className='text-sm dark:text-gray-400'>
+                              Tel: {booking.massage.company.contact}
+                            </p>
                           </div>
                           <div className='text-right'>
                             <p className='text-lg font-semibold'>
@@ -85,7 +88,7 @@ function Bookings({ MapsComponent, Breadcrumb }) {
                               40.00€
                             </p>
                             <a
-                              href='https://api.whatsapp.com/send?phone=<YOUR_PHONE_NUMBER>'
+                              href={`https://api.whatsapp.com/send?phone=${booking.massage.company.contact}`}
                               target='_blank'
                               rel='noopener noreferrer'
                             >
