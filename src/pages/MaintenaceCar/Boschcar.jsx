@@ -3,6 +3,7 @@ import { getService } from '@/api/services.api';
 import BoschcarIMG from '../../assets/boschcar.jpg';
 import { Link } from 'react-router-dom';
 import orangeicon from '../../assets/orangeicon.png';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function Boschcar({ MapsComponent }) {
   const [services, setServices] = useState();
@@ -24,7 +25,7 @@ function Boschcar({ MapsComponent }) {
 
   return loading ? (
     <div className='flex flex-col justify-center items-center'>
-      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <img src={loadingIMG} alt='Loading...' />
       <p>Loading...</p>
     </div>
   ) : (

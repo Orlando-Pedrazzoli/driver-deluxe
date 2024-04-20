@@ -3,6 +3,7 @@ import { getService } from '@/api/services.api';
 import vibrationImg from '../../assets/vibration.png';
 import { Link } from 'react-router-dom';
 import redicon from '../../assets/redicon.png';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function Vibration({ MapsComponent }) {
   const [services, setServices] = useState();
@@ -26,7 +27,7 @@ function Vibration({ MapsComponent }) {
 
   return loading ? (
     <div className='flex flex-col justify-center items-center'>
-      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <img src={loadingIMG} alt='Loading...' />
       <p>Loading...</p>
     </div>
   ) : (

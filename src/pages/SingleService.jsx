@@ -8,12 +8,7 @@ import { message } from 'antd';
 import { AuthContext } from '@/context/auth.context';
 import { addBooking } from '@/api/services.api';
 import dayjs from 'dayjs';
-
-const buttonStyle = {
-  backgroundColor: 'blue',
-  borderColor: 'blue',
-  color: 'white',
-};
+import loadingIMG from '../assets/LoadingNews.gif';
 
 function ProductPage({ MapsComponent }) {
   const [service, setService] = useState(null);
@@ -72,7 +67,7 @@ function ProductPage({ MapsComponent }) {
 
   return loading ? (
     <div className='flex flex-col justify-center items-center'>
-      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <img src={loadingIMG} alt='Loading...' />
       <p>Loading...</p>
     </div>
   ) : (
@@ -93,11 +88,12 @@ function ProductPage({ MapsComponent }) {
 
                   <div className='lg:py-24'>
                     <h2 className='text-3xl font-bold sm:text-4xl mb-4'>
-                      {service.type}
+                      Appointment for: <br />
+                      <span className='font-semi-bold'>{service.type}</span>
                     </h2>
                     <DatePicker onChange={handleDateChange} />
                     <TimePicker
-                      className='m-4 '
+                      className='m-4 appearance-none border border-gray-300 rounded-md px-4 py-2 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline'
                       onChange={handleTimeChange}
                       defaultValue={dayjs('12:00', format)}
                       format={format}

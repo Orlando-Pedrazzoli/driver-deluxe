@@ -3,6 +3,7 @@ import { getService } from '@/api/services.api';
 import { Link } from 'react-router-dom';
 import chairImg from '../../assets/chairmassage.png';
 import redicon from '../../assets/redicon.png';
+import loadingIMG from '../../assets/LoadingNews.gif';
 
 function ChairMassage({ MapsComponent }) {
   const [services, setServices] = useState();
@@ -24,7 +25,7 @@ function ChairMassage({ MapsComponent }) {
 
   return loading ? (
     <div className='flex flex-col justify-center items-center'>
-      <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+      <img src={loadingIMG} alt='Loading...' />
       <p>Loading...</p>
     </div>
   ) : (

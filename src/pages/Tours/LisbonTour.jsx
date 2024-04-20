@@ -1,4 +1,3 @@
-import React from 'react';
 import rossioimg from '../../assets/rossio.jpg';
 import lisbonimg from '../../assets/lisbon.jpg';
 import casteloimg from '../../assets/castelo.jpg';
@@ -83,7 +82,7 @@ function LisbonTour() {
           <div className='max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 relative'>
             <a
               rel='noopener noreferrer'
-              href='https://maps.app.goo.gl/s46xUtjYZgH7HvvG7'
+              href='https://maps.app.goo.gl/cVwxTLVfuJ6puQCG8'
               target='_blank'
             >
               <img

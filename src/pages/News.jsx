@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getNews } from '@/api/news.api';
+import loadingIMG from '../assets/LoadingNews.gif';
 
 function News() {
   const [news, setNews] = useState([]);
@@ -24,7 +25,7 @@ function News() {
       <h1 className='text-4xl font-bold text-center mb-8'>Latest News</h1>
       {loading ? (
         <div className='flex flex-col justify-center items-center'>
-          <img src='/src/assets/LoadingNews.gif' alt='Loading...' />
+          <img src={loadingIMG} alt='Loading...' />
           <p>Loading news...</p>
         </div>
       ) : (
